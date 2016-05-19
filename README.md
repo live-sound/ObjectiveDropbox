@@ -81,7 +81,7 @@ See DropboxClient.h for all available methods.
 
 Your download/upload tasks will remain active in background. Each download/upload method returns task object. You can cancel, suspend and resume it.
 
-**If you want to be a good iOS citizen add these lines in your AppDelegate:**
+**If you want to be a good iOS citizen add these lines to your AppDelegate implementation:**
 ```obj-c
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
 {
