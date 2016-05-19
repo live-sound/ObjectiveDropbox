@@ -31,23 +31,28 @@ To run the example project, clone the repo, and run 'ObjectiveDrobpox.xcworkspac
 
 ## Usage
 
-• Use the following import:
+**Use the following import:**
 ```obj-c
 #import "DropboxClient.h"
 ```
 
-• Then create DropboxClient:
+**Then create DropboxClient:**
 ```obj-c
-DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp key> redirectURL:<redirectURL> restartAllTasksAfterRelaunch:YES];
+DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp key> 
+                                redirectURL:<redirectURL> restartAllTasksAfterRelaunch:YES];
 ```
 I recommend to use 'http://localhost' as redirectURL (don't forget to add it in your Dropbox App page).
 
 If you want to use multiple Dropbox accounts simultaneously create each DropboxClient with this initializer:
 ```obj-c
-DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp key> redirectURL:<redirectURL> restartAllTasksAfterRelaunch:YES keychainAccount:<account string>];
+DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp key> 
+                                redirectURL:<redirectURL> 
+                                restartAllTasksAfterRelaunch:YES 
+                                keychainAccount:<account string>];
 ```
 
-• Check for access token before the first request (if you don't have access token the user will see Dropbox authentication UI on this step):
+**Check for access token before the first request:**
+(if you don't have access token the user will see Dropbox authentication UI on this step)
 ```obj-c
 [dropboxClient getNewTokenWithSuccess:^ { ...} fail:^(NSString * _Nonnull errorSummary) { ...}];
 ```
@@ -59,10 +64,12 @@ dropboxClient.accessToken = nil;
 ```
 And then call [dropboxClient getNewTokenWithSuccess:fail:] again.
 
-• Use all Drobpox features like this:
+**Use all Drobpox features like this:**
 ```obj-c
-DropboxCommitInfo *commitInfo = [[DropboxCommitInfo alloc] initWithPath:@"/myfile.txt" mode:[[DropboxWriteMode alloc] initWithOverwrite]];
-[dropboxClient.files upload:commitInfo sourceFileUrl:sourceFileURL progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpectedToSend) {
+DropboxCommitInfo *commitInfo = [[DropboxCommitInfo alloc] initWithPath:@"/myfile.txt" 
+                                mode:[[DropboxWriteMode alloc] initWithOverwrite]];
+[dropboxClient.files upload:commitInfo sourceFileUrl:sourceFileURL 
+progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpectedToSend) {
     NSLog(@"Upload progress %lli%%", totalBytesSent/totalBytesExpectedToSend);
 } success:^(DropboxFileMetadata * _Nonnull uploadResult) {
     NSLog(@"File uploaded: %@", uploadResult);
@@ -74,7 +81,7 @@ See DropboxClient.h for all available methods.
 
 Your download/upload tasks will remain active in background. Each download/upload method returns task object. You can cancel, suspend and resume it.
 
-• If you want to be a good iOS citizen add these lines in your AppDelegate:
+**If you want to be a good iOS citizen add these lines in your AppDelegate:**
 ```obj-c
 - (void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler
 {
