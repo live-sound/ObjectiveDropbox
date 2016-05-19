@@ -56,7 +56,7 @@ DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp
 ```obj-c
 [dropboxClient getNewTokenWithSuccess:^ { ...} fail:^(NSString * _Nonnull errorSummary) { ...}];
 ```
-Access token will be saved to user's keychain and restored later. Don't call that method if your dropboxClient.accessToken != nil.
+Access token will be saved to user's keychain and restored later. You don't have to call that method if your dropboxClient.accessToken != nil.
 
 If you want to change Dropbox user, use this code:
 ```obj-c
