@@ -23,7 +23,7 @@ it, simply add the following line to your Podfile:
 pod "ObjectiveDropbox"
 ```
 
-You can install it manually by copying source files into your project. In this case you should manually add WebKit.framework with 'Optional' status to your target.
+Or you can install it manually by copying source files into your project. In this case you should add WebKit.framework with 'Optional' status to your target.
 
 ## Example project
 
@@ -51,12 +51,12 @@ DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp
                                 keychainAccount:<account string>];
 ```
 
-**Check for access token before the first request:**
-(if you don't have access token the user will see Dropbox authentication UI on this step)
+**Get access token before the first request:**
+(user will see Dropbox authentication UI on this step)
 ```obj-c
 [dropboxClient getNewTokenWithSuccess:^ { ...} fail:^(NSString * _Nonnull errorSummary) { ...}];
 ```
-Access token will be saved to user's keychain and restored later. 
+Access token will be saved to user's keychain and restored later. Don't call that method if your dropboxClient.accessToken != nil.
 
 If you want to change Dropbox user, use this code:
 ```obj-c
