@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ObjectiveDropbox"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "Unofficial Objective-C SDK for Dropbox HTTP API v2"
 
 # This description is used to generate tags and improve search results.
@@ -21,10 +21,10 @@ Pod::Spec.new do |s|
                        Cocoapods installation supports iOS 8.0 and above. If you need iOS 7 support, copy all ObjectiveDrobpox files to your project and add WebKit as optional framework.
                        DESC
 
-  s.homepage         = "https://github.com/zlib/ObjectiveDrobpox"
+  s.homepage         = "https://github.com/zlib/ObjectiveDropbox"
   s.license          = 'MIT'
   s.author           = { "Mikhail Motyzhenkov" => "m.motyzhenkov@gmail.com" }
-  s.source           = { :git => "https://github.com/zlib/ObjectiveDrobpox.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/zlib/ObjectiveDropbox.git", :tag => s.version.to_s }
 
   s.platform     = :ios, '8.0'
   s.requires_arc = true
