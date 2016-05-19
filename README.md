@@ -27,7 +27,7 @@ Or you can install it manually by copying source files into your project. In thi
 
 ## Example project
 
-To run the example project, clone the repo, and run 'ObjectiveDrobpox.xcworkspace' from the Example directory.
+To run the example project, clone the repo, and run 'ObjectiveDropbox.xcworkspace' from the Example directory.
 
 ## Usage
 
@@ -64,7 +64,7 @@ dropboxClient.accessToken = nil;
 ```
 And then call [dropboxClient getNewTokenWithSuccess:fail:] again.
 
-**Use all Drobpox features like this:**
+**Use all Dropbox features like this:**
 ```obj-c
 DropboxCommitInfo *commitInfo = [[DropboxCommitInfo alloc] initWithPath:@"/myfile.txt" 
                                 mode:[[DropboxWriteMode alloc] initWithOverwrite]];
