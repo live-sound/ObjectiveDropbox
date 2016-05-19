@@ -1,0 +1,19 @@
+PODS:
+  - ObjectiveDropbox (1.0.0)
+  - OCMock (3.3)
+
+DEPENDENCIES:
+  - ObjectiveDropbox (from `../`)
+  - OCMock
+
+EXTERNAL SOURCES:
+  ObjectiveDropbox:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ObjectiveDropbox: 67f70cad5f522e31deb8f9a43393af3da476aa97
+  OCMock: d68685bde31f69cb61d518dcb39269080c78b5ed
+
+PODFILE CHECKSUM: d16ea92df6dc2a2232a616f17fcebb252b741c40
+
+COCOAPODS: 1.0.0

@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'ObjectiveDropbox_Example' do
+  pod 'ObjectiveDropbox', :path => '../'  
+end
+
+target 'ObjectiveDropbox_Tests' do
+  pod 'OCMock'
+  pod 'ObjectiveDropbox', :path => '../'
+end

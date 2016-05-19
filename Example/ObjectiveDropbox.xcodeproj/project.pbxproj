@@ -1,0 +1,1361 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		45DE519CF22619C2161E3B0A /* Pods_ObjectiveDropbox_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC78E1EEF8C5CAE6B32BA79 /* Pods_ObjectiveDropbox_Tests.framework */; };
+		5BC36CA90F58A4656CBB0839 /* Pods_ObjectiveDropbox_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E765B9511CAFE57F19F47043 /* Pods_ObjectiveDropbox_Example.framework */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* DropboxAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* DropboxAppDelegate.m */; };
+		6003F5A7195388D20070C39A /* DropboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* DropboxViewController.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		CE1BED021CCCB077008DE34D /* DropboxSharedLinkSettingsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED011CCCB077008DE34D /* DropboxSharedLinkSettingsTests.m */; };
+		CE1BED081CCCB514008DE34D /* DropboxSharedLinkSettingsDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED071CCCB514008DE34D /* DropboxSharedLinkSettingsDictionarySerializerTests.m */; };
+		CE1BED0E1CCCB78C008DE34D /* DropboxCreateSharedLinkWithSettingsArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED0D1CCCB78C008DE34D /* DropboxCreateSharedLinkWithSettingsArgTests.m */; };
+		CE1BED141CCCB949008DE34D /* DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED131CCCB949008DE34D /* DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m */; };
+		CE1BED241CCCD08B008DE34D /* DropboxRequestedVisibilityParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED231CCCD08B008DE34D /* DropboxRequestedVisibilityParserTests.m */; };
+		CE1BED2C1CCCD380008DE34D /* DropboxResolvedVisibilityParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED2B1CCCD380008DE34D /* DropboxResolvedVisibilityParserTests.m */; };
+		CE1BED331CCCD87D008DE34D /* DropboxSharedLinkAccessFailureReasonParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED321CCCD87D008DE34D /* DropboxSharedLinkAccessFailureReasonParserTests.m */; };
+		CE1BED3E1CCCE086008DE34D /* DropboxLinkPermissionsDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED3D1CCCE086008DE34D /* DropboxLinkPermissionsDictionaryParserTests.m */; };
+		CE1BED481CCCE56F008DE34D /* DropboxTeamMemberInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED471CCCE56F008DE34D /* DropboxTeamMemberInfoDictionaryParserTests.m */; };
+		CE1BED561CCD073B008DE34D /* DropboxSharedLinkMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1BED551CCD073B008DE34D /* DropboxSharedLinkMetadataDictionaryParserTests.m */; };
+		CE26170C1CC4F05600E46B7A /* DropboxGetTemporaryLinkResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE26170B1CC4F05600E46B7A /* DropboxGetTemporaryLinkResultDictionaryParserTests.m */; };
+		CE268FF01CC7D105002725BF /* DropboxRestoreArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE268FEF1CC7D105002725BF /* DropboxRestoreArgTests.m */; };
+		CE268FF61CC7E7BB002725BF /* DropboxRestoreArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE268FF51CC7E7BB002725BF /* DropboxRestoreArgDictionarySerializerTests.m */; };
+		CE2A113D1CD1FDAE00CDC1B5 /* DropboxSharedFolderMemberPolicyParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A113C1CD1FDAE00CDC1B5 /* DropboxSharedFolderMemberPolicyParserTests.m */; };
+		CE2A11451CD1FF9400CDC1B5 /* DropboxSharedFolderJoinPolicyParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11441CD1FF9400CDC1B5 /* DropboxSharedFolderJoinPolicyParserTests.m */; };
+		CE2A114D1CD201FC00CDC1B5 /* DropboxSharedLinkCreatePolicyParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A114C1CD201FC00CDC1B5 /* DropboxSharedLinkCreatePolicyParserTests.m */; };
+		CE2A11571CD205F400CDC1B5 /* DropboxTeamSharingPoliciesDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11561CD205F400CDC1B5 /* DropboxTeamSharingPoliciesDictionaryParserTests.m */; };
+		CE2A11611CD2098D00CDC1B5 /* DropboxFullTeamDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11601CD2098D00CDC1B5 /* DropboxFullTeamDictionaryParserTests.m */; };
+		CE2A116B1CD2147200CDC1B5 /* DropboxFullAccountDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A116A1CD2147200CDC1B5 /* DropboxFullAccountDictionaryParserTests.m */; };
+		CE2A11811CD219E900CDC1B5 /* DropboxIndividualSpaceAllocationDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11801CD219E900CDC1B5 /* DropboxIndividualSpaceAllocationDictionaryParserTests.m */; };
+		CE2A118B1CD21B9600CDC1B5 /* DropboxTeamSpaceAllocationDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A118A1CD21B9600CDC1B5 /* DropboxTeamSpaceAllocationDictionaryParserTests.m */; };
+		CE2A119B1CD21F8C00CDC1B5 /* DropboxSpaceAllocationDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A119A1CD21F8C00CDC1B5 /* DropboxSpaceAllocationDictionaryParserTests.m */; };
+		CE2A11A11CD220F500CDC1B5 /* DropboxSpaceUsageDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11A01CD220F500CDC1B5 /* DropboxSpaceUsageDictionaryParserTests.m */; };
+		CE2A11A41CD227B700CDC1B5 /* DropboxViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A11A31CD227B700CDC1B5 /* DropboxViewModel.m */; };
+		CE2A11A91CD24EFE00CDC1B5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2A11A81CD24EFE00CDC1B5 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CE2A11AA1CD25DB600CDC1B5 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2A11A81CD24EFE00CDC1B5 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		CE2A99071CBF934F003A34CD /* DropboxHttpHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A99061CBF934F003A34CD /* DropboxHttpHelperTests.m */; };
+		CE2A9E901CC9FBA6001459AB /* DropboxDropboxAccessLevelDictionarySeriailzerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9E8F1CC9FBA6001459AB /* DropboxDropboxAccessLevelDictionarySeriailzerTests.m */; };
+		CE2A9E961CC9FF75001459AB /* DropboxMemberSelectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9E951CC9FF75001459AB /* DropboxMemberSelectorTests.m */; };
+		CE2A9E9C1CCA01BC001459AB /* DropboxMemberSelectorDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9E9B1CCA01BC001459AB /* DropboxMemberSelectorDictionarySerializerTests.m */; };
+		CE2A9EA21CCA0602001459AB /* DropboxAddMemberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EA11CCA0602001459AB /* DropboxAddMemberTests.m */; };
+		CE2A9EA81CCA074B001459AB /* DropboxAddMemberDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EA71CCA074B001459AB /* DropboxAddMemberDictionarySerializerTests.m */; };
+		CE2A9EAA1CCA0BA6001459AB /* DropboxAddFolderMemberArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EA91CCA0BA6001459AB /* DropboxAddFolderMemberArgTests.m */; };
+		CE2A9EB01CCA0DDF001459AB /* DropboxAddFolderMemberArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EAF1CCA0DDF001459AB /* DropboxAddFolderMemberArgDictionarySerializerTests.m */; };
+		CE2A9EBD1CCA45AF001459AB /* DropboxPollArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EBC1CCA45AF001459AB /* DropboxPollArgTests.m */; };
+		CE2A9EC31CCA46FD001459AB /* DropboxPollArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EC21CCA46FD001459AB /* DropboxPollArgDictionarySerializerTests.m */; };
+		CE2A9ED31CCA52DB001459AB /* DropboxJobStatusResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9ED21CCA52DB001459AB /* DropboxJobStatusResultDictionaryParserTests.m */; };
+		CE2A9EE11CCA6660001459AB /* DropboxFolderPolicyDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EE01CCA6660001459AB /* DropboxFolderPolicyDictionaryParserTests.m */; };
+		CE2A9EEB1CCA6938001459AB /* DropboxTeamDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EEA1CCA6938001459AB /* DropboxTeamDictionaryParserTests.m */; };
+		CE2A9EF51CCA741F001459AB /* DropboxFolderPermissionDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EF41CCA741F001459AB /* DropboxFolderPermissionDictionaryParserTests.m */; };
+		CE2A9EFF1CCA7FA8001459AB /* DropboxAccessLevelDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9EFE1CCA7FA8001459AB /* DropboxAccessLevelDictionaryParserTests.m */; };
+		CE2A9F011CCA8A31001459AB /* DropboxSharedFolderMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9F001CCA8A31001459AB /* DropboxSharedFolderMetadataDictionaryParserTests.m */; };
+		CE2A9F0B1CCAADB2001459AB /* DropboxShareFolderJobStatusResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2A9F0A1CCAADB2001459AB /* DropboxShareFolderJobStatusResultDictionaryParserTests.m */; };
+		CE2B088D1CBE8AAA00CD5B42 /* DropboxCreateFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B082F1CBE892D00CD5B42 /* DropboxCreateFolderArgDictionarySerializerTests.m */; };
+		CE2B088E1CBE8AAA00CD5B42 /* DropboxCreateFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08301CBE892D00CD5B42 /* DropboxCreateFolderArgTests.m */; };
+		CE2B088F1CBE8AAA00CD5B42 /* DropboxDeleteArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08311CBE892D00CD5B42 /* DropboxDeleteArgDictionarySerializerTests.m */; };
+		CE2B08901CBE8AAA00CD5B42 /* DropboxDeleteArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08321CBE892D00CD5B42 /* DropboxDeleteArgTests.m */; };
+		CE2B08911CBE8AAA00CD5B42 /* DropboxDimensionsDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08331CBE892D00CD5B42 /* DropboxDimensionsDictionaryParserTests.m */; };
+		CE2B08921CBE8AAA00CD5B42 /* DropboxDimensionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08341CBE892D00CD5B42 /* DropboxDimensionsTests.m */; };
+		CE2B08931CBE8AAA00CD5B42 /* DropboxDownloadArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08351CBE892D00CD5B42 /* DropboxDownloadArgDictionarySerializerTests.m */; };
+		CE2B08941CBE8AAA00CD5B42 /* DropboxDownloadArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08361CBE892D00CD5B42 /* DropboxDownloadArgTests.m */; };
+		CE2B08951CBE8AAA00CD5B42 /* DropboxFileMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08371CBE892D00CD5B42 /* DropboxFileMetadataDictionaryParserTests.m */; };
+		CE2B08961CBE8AAA00CD5B42 /* DropboxFileSharingInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08381CBE892D00CD5B42 /* DropboxFileSharingInfoDictionaryParserTests.m */; };
+		CE2B08971CBE8AAA00CD5B42 /* DropboxFileSystemSharingInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08391CBE892D00CD5B42 /* DropboxFileSystemSharingInfoDictionaryParserTests.m */; };
+		CE2B08981CBE8AAA00CD5B42 /* DropboxFolderMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083A1CBE892D00CD5B42 /* DropboxFolderMetadataDictionaryParserTests.m */; };
+		CE2B08991CBE8AAA00CD5B42 /* DropboxFolderSharingInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083B1CBE892D00CD5B42 /* DropboxFolderSharingInfoDictionaryParserTests.m */; };
+		CE2B089A1CBE8AAA00CD5B42 /* DropboxGetMetadataArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083C1CBE892D00CD5B42 /* DropboxGetMetadataArgDictionarySerializerTests.m */; };
+		CE2B089B1CBE8AAA00CD5B42 /* DropboxGetMetadataArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083D1CBE892D00CD5B42 /* DropboxGetMetadataArgTests.m */; };
+		CE2B089C1CBE8AAA00CD5B42 /* DropboxGetPreviewArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083E1CBE892D00CD5B42 /* DropboxGetPreviewArgDictionarySerializerTests.m */; };
+		CE2B089D1CBE8AAA00CD5B42 /* DropboxGetPreviewArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B083F1CBE892D00CD5B42 /* DropboxGetPreviewArgTests.m */; };
+		CE2B089E1CBE8AAA00CD5B42 /* DropboxGetTemporaryLinkArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08401CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgDictionarySerializerTests.m */; };
+		CE2B089F1CBE8AAA00CD5B42 /* DropboxGetTemporaryLinkArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08411CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgTests.m */; };
+		CE2B08A01CBE8AAA00CD5B42 /* DropboxGetThumbnailArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08421CBE892D00CD5B42 /* DropboxGetThumbnailArgDictionarySerializerTests.m */; };
+		CE2B08A11CBE8AAA00CD5B42 /* DropboxGetThumbnailArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08431CBE892D00CD5B42 /* DropboxGetThumbnailArgTests.m */; };
+		CE2B08A21CBE8AAA00CD5B42 /* DropboxGpsCoordinatesDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08441CBE892D00CD5B42 /* DropboxGpsCoordinatesDictionaryParserTests.m */; };
+		CE2B08A31CBE8AAA00CD5B42 /* DropboxGpsCoordinatesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08451CBE892D00CD5B42 /* DropboxGpsCoordinatesTests.m */; };
+		CE2B08A41CBE8AAA00CD5B42 /* DropboxListFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08461CBE892D00CD5B42 /* DropboxListFolderArgDictionarySerializerTests.m */; };
+		CE2B08A51CBE8AAA00CD5B42 /* DropboxListFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08471CBE892D00CD5B42 /* DropboxListFolderArgTests.m */; };
+		CE2B08A61CBE8AAA00CD5B42 /* DropboxListFolderContinueArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08481CBE892D00CD5B42 /* DropboxListFolderContinueArgDictionarySerializerTests.m */; };
+		CE2B08A71CBE8AAA00CD5B42 /* DropboxListFolderContinueArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08491CBE892D00CD5B42 /* DropboxListFolderContinueArgTests.m */; };
+		CE2B08A81CBE8AAA00CD5B42 /* DropboxListFolderGetLatestCursorResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084A1CBE892D00CD5B42 /* DropboxListFolderGetLatestCursorResultDictionaryParserTests.m */; };
+		CE2B08A91CBE8AAA00CD5B42 /* DropboxListFolderLongpollArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084B1CBE892D00CD5B42 /* DropboxListFolderLongpollArgDictionarySerializerTests.m */; };
+		CE2B08AA1CBE8AAA00CD5B42 /* DropboxListFolderLongpollArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084C1CBE892D00CD5B42 /* DropboxListFolderLongpollArgTests.m */; };
+		CE2B08AB1CBE8AAA00CD5B42 /* DropboxListFolderLongpollResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084D1CBE892D00CD5B42 /* DropboxListFolderLongpollResultDictionaryParserTests.m */; };
+		CE2B08AC1CBE8AAA00CD5B42 /* DropboxListFolderResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084E1CBE892D00CD5B42 /* DropboxListFolderResultDictionaryParserTests.m */; };
+		CE2B08AD1CBE8AAA00CD5B42 /* DropboxListRevisionsArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B084F1CBE892D00CD5B42 /* DropboxListRevisionsArgDictionarySerializerTests.m */; };
+		CE2B08AE1CBE8AAA00CD5B42 /* DropboxListRevisionsArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08501CBE892D00CD5B42 /* DropboxListRevisionsArgTests.m */; };
+		CE2B08AF1CBE8AAA00CD5B42 /* DropboxListRevisionsResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08511CBE892D00CD5B42 /* DropboxListRevisionsResultDictionaryParserTests.m */; };
+		CE2B08B01CBE8AAA00CD5B42 /* DropboxMediaInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08521CBE892D00CD5B42 /* DropboxMediaInfoDictionaryParserTests.m */; };
+		CE2B08B11CBE8AAA00CD5B42 /* DropboxMediaMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08531CBE892D00CD5B42 /* DropboxMediaMetadataDictionaryParserTests.m */; };
+		CE2B08B21CBE8AAA00CD5B42 /* DropboxMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08541CBE892D00CD5B42 /* DropboxMetadataDictionaryParserTests.m */; };
+		CE2B08B31CBE8AAA00CD5B42 /* DropboxPhotoMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08551CBE892D00CD5B42 /* DropboxPhotoMetadataDictionaryParserTests.m */; };
+		CE2B08B41CBE8AAA00CD5B42 /* DropboxRelocationArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08561CBE892D00CD5B42 /* DropboxRelocationArgDictionarySerializerTests.m */; };
+		CE2B08B51CBE8AAA00CD5B42 /* DropboxRelocationArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08571CBE892D00CD5B42 /* DropboxRelocationArgTests.m */; };
+		CE2B08B61CBE8AAA00CD5B42 /* DropboxRoutesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08581CBE892D00CD5B42 /* DropboxRoutesTests.m */; };
+		CE2B08B71CBE8AAA00CD5B42 /* DropboxStringToDateConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B08591CBE892D00CD5B42 /* DropboxStringToDateConverterTests.m */; };
+		CE2B08B81CBE8AAA00CD5B42 /* DropboxThumbnailFormatToStringSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B085A1CBE892D00CD5B42 /* DropboxThumbnailFormatToStringSerializerTests.m */; };
+		CE2B08B91CBE8AAA00CD5B42 /* DropboxThumbnailSizeToStringSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B085B1CBE892D00CD5B42 /* DropboxThumbnailSizeToStringSerializerTests.m */; };
+		CE2B08BA1CBE8AAA00CD5B42 /* DropboxVideoMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2B085C1CBE892D00CD5B42 /* DropboxVideoMetadataDictionaryParserTests.m */; };
+		CE2C13A81CCF416B00812AE2 /* DropboxUserInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13A71CCF416B00812AE2 /* DropboxUserInfoDictionaryParserTests.m */; };
+		CE2C13B61CCF4CA800812AE2 /* DropboxMemberActionParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13B51CCF4CA800812AE2 /* DropboxMemberActionParserTests.m */; };
+		CE2C13B81CCF4FAE00812AE2 /* DropboxPermissionDeniedReasonParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13B71CCF4FAE00812AE2 /* DropboxPermissionDeniedReasonParserTests.m */; };
+		CE2C13BA1CCF512D00812AE2 /* DropboxMemberPermissionDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13B91CCF512D00812AE2 /* DropboxMemberPermissionDictionaryParserTests.m */; };
+		CE2C13C41CCF579700812AE2 /* DropboxUserMembershipInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13C31CCF579700812AE2 /* DropboxUserMembershipInfoDictionaryParserTests.m */; };
+		CE2C13D01CCF5E3D00812AE2 /* DropboxGroupTypeParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13CF1CCF5E3D00812AE2 /* DropboxGroupTypeParserTests.m */; };
+		CE2C13DA1CCF627300812AE2 /* DropboxGroupInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13D91CCF627300812AE2 /* DropboxGroupInfoDictionaryParserTests.m */; };
+		CE2C13EC1CCF682700812AE2 /* DropboxGroupMembershipInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13EB1CCF682700812AE2 /* DropboxGroupMembershipInfoDictionaryParserTests.m */; };
+		CE2C13F61CCF6FCA00812AE2 /* DropboxInviteeInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13F51CCF6FCA00812AE2 /* DropboxInviteeInfoDictionaryParserTests.m */; };
+		CE2C14001CCF717700812AE2 /* DropboxInviteeMembershipInfoDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C13FF1CCF717700812AE2 /* DropboxInviteeMembershipInfoDictionaryParserTests.m */; };
+		CE2C140A1CCF7B9B00812AE2 /* DropboxSharedFolderMembersDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14091CCF7B9B00812AE2 /* DropboxSharedFolderMembersDictionaryParserTests.m */; };
+		CE2C14141CCF7E4900812AE2 /* DropboxListFolerMembersContinueArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14131CCF7E4900812AE2 /* DropboxListFolerMembersContinueArgDictionarySerializerTests.m */; };
+		CE2C141A1CCF81C300812AE2 /* DropboxListFoldersArgsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14191CCF81C300812AE2 /* DropboxListFoldersArgsTests.m */; };
+		CE2C14201CCF841000812AE2 /* DropboxListFoldersArgsDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C141F1CCF841000812AE2 /* DropboxListFoldersArgsDictionarySerializerTests.m */; };
+		CE2C142A1CCF86F100812AE2 /* DropboxListFoldersResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14291CCF86F100812AE2 /* DropboxListFoldersResultDictionaryParserTests.m */; };
+		CE2C14301CCF88EA00812AE2 /* DropboxListFoldersContinueArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C142F1CCF88EA00812AE2 /* DropboxListFoldersContinueArgTests.m */; };
+		CE2C14361CCF89E500812AE2 /* DropboxListFoldersContinueArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14351CCF89E500812AE2 /* DropboxListFoldersContinueArgDictionarySerializerTests.m */; };
+		CE2C143C1CCF909400812AE2 /* DropboxListSharedLinksArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C143B1CCF909400812AE2 /* DropboxListSharedLinksArgTests.m */; };
+		CE2C14421CCF932100812AE2 /* DropboxListSharedLinksArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14411CCF932100812AE2 /* DropboxListSharedLinksArgDictionarySerializerTests.m */; };
+		CE2C144C1CCF97F600812AE2 /* DropboxListSharedLinkResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C144B1CCF97F600812AE2 /* DropboxListSharedLinkResultDictionaryParserTests.m */; };
+		CE2C14521CCF9AA600812AE2 /* DropboxModifySharedLinkSettingsArgsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14511CCF9AA600812AE2 /* DropboxModifySharedLinkSettingsArgsTests.m */; };
+		CE2C14581CCF9D2E00812AE2 /* DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14571CCF9D2E00812AE2 /* DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m */; };
+		CE2C145E1CCFA03C00812AE2 /* DropboxMountFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C145D1CCFA03C00812AE2 /* DropboxMountFolderArgTests.m */; };
+		CE2C14641CCFA0F200812AE2 /* DropboxMountFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14631CCFA0F200812AE2 /* DropboxMountFolderArgDictionarySerializerTests.m */; };
+		CE2C146A1CCFA30000812AE2 /* DropboxRelinquishFolderMembershipArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14691CCFA30000812AE2 /* DropboxRelinquishFolderMembershipArgTests.m */; };
+		CE2C14701CCFA39100812AE2 /* DropboxRelinquishFolderMembershipDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C146F1CCFA39100812AE2 /* DropboxRelinquishFolderMembershipDictionarySerializerTests.m */; };
+		CE2C147E1CCFC0D200812AE2 /* DropboxRemoveFolderMemberArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C147D1CCFC0D200812AE2 /* DropboxRemoveFolderMemberArgTests.m */; };
+		CE2C14871CCFC22A00812AE2 /* DropboxRemoveFolderMemberArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14861CCFC22A00812AE2 /* DropboxRemoveFolderMemberArgDictionarySerializerTests.m */; };
+		CE2C14971CCFC75D00812AE2 /* DropboxLaunchEmptyResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2C14961CCFC75D00812AE2 /* DropboxLaunchEmptyResultDictionaryParserTests.m */; };
+		CE64F41A1CE5A24800178047 /* Картинка.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE64F4191CE5A24800178047 /* Картинка.jpg */; };
+		CE66A17F1CCDFE50009FFF3B /* DropboxFileLinkMetadataDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A17E1CCDFE50009FFF3B /* DropboxFileLinkMetadataDictionaryParserTests.m */; };
+		CE66A1851CCE0203009FFF3B /* DropboxSharedLinkMetadataParseManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1841CCE0203009FFF3B /* DropboxSharedLinkMetadataParseManagerTests.m */; };
+		CE66A1981CCE150F009FFF3B /* DropboxGetMetadataArgsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1971CCE150F009FFF3B /* DropboxGetMetadataArgsTests.m */; };
+		CE66A1A01CCE1898009FFF3B /* DropboxFolderActionSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A19F1CCE1898009FFF3B /* DropboxFolderActionSerializerTests.m */; };
+		CE66A1A61CCE1F01009FFF3B /* DropboxGetMetadataArgsDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1A51CCE1F01009FFF3B /* DropboxGetMetadataArgsDictionarySerializerTests.m */; };
+		CE66A1AC1CCE23C5009FFF3B /* DropboxGetSharedLinkMetadataArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1AB1CCE23C5009FFF3B /* DropboxGetSharedLinkMetadataArgTests.m */; };
+		CE66A1B21CCE24FB009FFF3B /* DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1B11CCE24FB009FFF3B /* DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m */; };
+		CE66A1C61CCE3757009FFF3B /* DropboxMemberActionSerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1C51CCE3757009FFF3B /* DropboxMemberActionSerializerTests.m */; };
+		CE66A1C81CCE3CFC009FFF3B /* DropboxListFolderMembersArgsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1C71CCE3CFC009FFF3B /* DropboxListFolderMembersArgsTests.m */; };
+		CE66A1CE1CCE401B009FFF3B /* DropboxListFolderMembersArgsDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66A1CD1CCE401B009FFF3B /* DropboxListFolderMembersArgsDictionarySerializerTests.m */; };
+		CE67B5F11CC8BF1A009FEDA0 /* DropboxSearchArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B5F01CC8BF1A009FEDA0 /* DropboxSearchArgTests.m */; };
+		CE67B5F71CC8C1F2009FEDA0 /* DropboxSearchArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B5F61CC8C1F2009FEDA0 /* DropboxSearchArgDictionarySerializerTests.m */; };
+		CE67B5FF1CC8C87B009FEDA0 /* DropboxSearchMatchTypeParseManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B5FE1CC8C87B009FEDA0 /* DropboxSearchMatchTypeParseManagerTests.m */; };
+		CE67B60D1CC8D125009FEDA0 /* DropboxSearchMatchDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B60C1CC8D125009FEDA0 /* DropboxSearchMatchDictionaryParserTests.m */; };
+		CE67B6131CC8D6EE009FEDA0 /* DropboxSearchResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6121CC8D6EE009FEDA0 /* DropboxSearchResultDictionaryParserTests.m */; };
+		CE67B61D1CC8DDE1009FEDA0 /* DropboxWriteModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B61C1CC8DDE1009FEDA0 /* DropboxWriteModeTests.m */; };
+		CE67B6231CC8E0F7009FEDA0 /* DropboxWriteModeDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6221CC8E0F7009FEDA0 /* DropboxWriteModeDictionarySerializerTests.m */; };
+		CE67B6261CC8E41E009FEDA0 /* DropboxCommitInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6251CC8E41E009FEDA0 /* DropboxCommitInfoTests.m */; };
+		CE67B6301CC8E9C1009FEDA0 /* DateToDropboxStringConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B62F1CC8E9C1009FEDA0 /* DateToDropboxStringConverterTests.m */; };
+		CE67B6321CC8EDF3009FEDA0 /* DropboxCommitInfo+DictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6311CC8EDF3009FEDA0 /* DropboxCommitInfo+DictionarySerializerTests.m */; };
+		CE67B6381CC91AF3009FEDA0 /* DropboxUploadSessionCursorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6371CC91AF3009FEDA0 /* DropboxUploadSessionCursorTests.m */; };
+		CE67B6421CC91C8F009FEDA0 /* DropboxUploadSessionCursorDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6411CC91C8F009FEDA0 /* DropboxUploadSessionCursorDictionarySerializerTests.m */; };
+		CE67B6441CC91DE6009FEDA0 /* DropboxUploadSessionAppendArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6431CC91DE6009FEDA0 /* DropboxUploadSessionAppendArgTests.m */; };
+		CE67B64A1CC91F33009FEDA0 /* DropboxUploadSessionAppendArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6491CC91F33009FEDA0 /* DropboxUploadSessionAppendArgDictionarySerializerTests.m */; };
+		CE67B6501CC93453009FEDA0 /* DropboxUploadSessionFinishArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B64F1CC93453009FEDA0 /* DropboxUploadSessionFinishArgTests.m */; };
+		CE67B6561CC93689009FEDA0 /* DropboxUploadSessionFinishArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6551CC93689009FEDA0 /* DropboxUploadSessionFinishArgDictionarySerializerTests.m */; };
+		CE67B65C1CC9598B009FEDA0 /* DropboxUploadSessionStartArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B65B1CC9598B009FEDA0 /* DropboxUploadSessionStartArgTests.m */; };
+		CE67B6621CC95A38009FEDA0 /* DropboxUploadSessionStartArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B6611CC95A38009FEDA0 /* DropboxUploadSessionStartArgDictionarySerializerTests.m */; };
+		CE67B66C1CC95BCF009FEDA0 /* DropboxUploadSessionStartResultDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE67B66B1CC95BCF009FEDA0 /* DropboxUploadSessionStartResultDictionaryParserTests.m */; };
+		CE6AC8F51CE3412400365B04 /* DropboxNSURLFileOperationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6AC8F41CE3412400365B04 /* DropboxNSURLFileOperationsTests.m */; };
+		CE7ED6A81CD0A91300C29086 /* DropboxRevokeSharedLinkArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6A71CD0A91300C29086 /* DropboxRevokeSharedLinkArgTests.m */; };
+		CE7ED6AE1CD0AA0F00C29086 /* DropboxRevokeSharedLinkArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6AD1CD0AA0F00C29086 /* DropboxRevokeSharedLinkArgDictionarySerializerTests.m */; };
+		CE7ED6BE1CD0AF5200C29086 /* DropboxMemberPolicySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6BD1CD0AF5200C29086 /* DropboxMemberPolicySerializerTests.m */; };
+		CE7ED6C41CD0B05800C29086 /* DropboxAclUpdatePolicySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6C31CD0B05800C29086 /* DropboxAclUpdatePolicySerializerTests.m */; };
+		CE7ED6CA1CD0B44100C29086 /* DropboxSharedLinkPolicySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6C91CD0B44100C29086 /* DropboxSharedLinkPolicySerializerTests.m */; };
+		CE7ED6CC1CD0B6FA00C29086 /* DropboxShareFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6CB1CD0B6FA00C29086 /* DropboxShareFolderArgTests.m */; };
+		CE7ED6D21CD0B90F00C29086 /* DropboxShareFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6D11CD0B90F00C29086 /* DropboxShareFolderArgDictionarySerializerTests.m */; };
+		CE7ED6DA1CD0BFB500C29086 /* DropboxShareFolderLaunchEnumParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6D91CD0BFB500C29086 /* DropboxShareFolderLaunchEnumParserTests.m */; };
+		CE7ED6E41CD0C4D900C29086 /* DropboxShareFolderLaunchDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6E31CD0C4D900C29086 /* DropboxShareFolderLaunchDictionaryParserTests.m */; };
+		CE7ED6EA1CD0DBA300C29086 /* DropboxTransferFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6E91CD0DBA300C29086 /* DropboxTransferFolderArgTests.m */; };
+		CE7ED6FC1CD0E00600C29086 /* DropboxTransferFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED6FB1CD0E00600C29086 /* DropboxTransferFolderArgDictionarySerializerTests.m */; };
+		CE7ED7021CD0E2B500C29086 /* DropboxUnmountFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7011CD0E2B500C29086 /* DropboxUnmountFolderArgTests.m */; };
+		CE7ED7081CD0E35D00C29086 /* DropboxUnmountFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7071CD0E35D00C29086 /* DropboxUnmountFolderArgDictionarySerializerTests.m */; };
+		CE7ED70E1CD0E52500C29086 /* DropboxUnshareFolderArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED70D1CD0E52500C29086 /* DropboxUnshareFolderArgTests.m */; };
+		CE7ED7141CD0E5FC00C29086 /* DropboxUnshareFolderArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7131CD0E5FC00C29086 /* DropboxUnshareFolderArgDictionarySerializerTests.m */; };
+		CE7ED71A1CD0E9C100C29086 /* DropboxUpdateFolderMemberArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7191CD0E9C100C29086 /* DropboxUpdateFolderMemberArgTests.m */; };
+		CE7ED7201CD0EC2900C29086 /* DropboxUpdateFolderMemberArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED71F1CD0EC2900C29086 /* DropboxUpdateFolderMemberArgDictionarySerializerTests.m */; };
+		CE7ED7261CD0EF9100C29086 /* DropboxUpdateFolderPolicyArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7251CD0EF9100C29086 /* DropboxUpdateFolderPolicyArgTests.m */; };
+		CE7ED72C1CD0F38F00C29086 /* DropboxUpdateFolderPolicyArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED72B1CD0F38F00C29086 /* DropboxUpdateFolderPolicyArgDictionarySerializerTests.m */; };
+		CE7ED7321CD1086800C29086 /* DropboxGetAccountArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7311CD1086800C29086 /* DropboxGetAccountArgTests.m */; };
+		CE7ED7381CD1092B00C29086 /* DropboxGetAccountArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7371CD1092B00C29086 /* DropboxGetAccountArgDictionarySerializerTests.m */; };
+		CE7ED7421CD10AEA00C29086 /* DropboxNameDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7411CD10AEA00C29086 /* DropboxNameDictionaryParserTests.m */; };
+		CE7ED74C1CD10EEC00C29086 /* DropboxBasicAccountDictionaryParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED74B1CD10EEC00C29086 /* DropboxBasicAccountDictionaryParserTests.m */; };
+		CE7ED7521CD119BC00C29086 /* DropboxGetAccountBatchArgTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7511CD119BC00C29086 /* DropboxGetAccountBatchArgTests.m */; };
+		CE7ED7581CD11DCD00C29086 /* DropboxGetAccountBatchArgDictionarySerializerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED7571CD11DCD00C29086 /* DropboxGetAccountBatchArgDictionarySerializerTests.m */; };
+		CE7ED7601CD12ABA00C29086 /* DropboxAccountTypeParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7ED75F1CD12ABA00C29086 /* DropboxAccountTypeParserTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = ObjectiveDropbox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1CC11C51ABFA7D43CB7BA669 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		1F872D5A190CBBA3E0578448 /* Pods-ObjectiveDropbox_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveDropbox_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveDropbox_Example/Pods-ObjectiveDropbox_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3C6357A32753340BF87E6C90 /* Pods-ObjectiveDropbox_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveDropbox_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveDropbox_Tests/Pods-ObjectiveDropbox_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		41898A8CDE0D4B23915627CD /* Pods-ObjectiveDropbox_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveDropbox_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveDropbox_Example/Pods-ObjectiveDropbox_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4225AA8918CD2871C50EEDD8 /* ObjectiveDropbox.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ObjectiveDropbox.podspec; path = ../ObjectiveDropbox.podspec; sourceTree = "<group>"; };
+		52339442F16BE6EAA5D25939 /* Pods-ObjectiveDropbox_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectiveDropbox_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObjectiveDropbox_Tests/Pods-ObjectiveDropbox_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5566F4EE560D655FA7C55620 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* ObjectiveDropbox_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveDropbox_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* ObjectiveDropbox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ObjectiveDropbox-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* ObjectiveDropbox-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveDropbox-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* DropboxAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxAppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* DropboxAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxAppDelegate.m; sourceTree = "<group>"; };
+		6003F5A5195388D20070C39A /* DropboxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxViewController.h; sourceTree = "<group>"; };
+		6003F5A6195388D20070C39A /* DropboxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropboxViewController.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* ObjectiveDropbox_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveDropbox_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		8DC78E1EEF8C5CAE6B32BA79 /* Pods_ObjectiveDropbox_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveDropbox_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE1BED011CCCB077008DE34D /* DropboxSharedLinkSettingsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkSettingsTests.m; sourceTree = "<group>"; };
+		CE1BED071CCCB514008DE34D /* DropboxSharedLinkSettingsDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkSettingsDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE1BED0D1CCCB78C008DE34D /* DropboxCreateSharedLinkWithSettingsArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxCreateSharedLinkWithSettingsArgTests.m; sourceTree = "<group>"; };
+		CE1BED131CCCB949008DE34D /* DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE1BED231CCCD08B008DE34D /* DropboxRequestedVisibilityParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRequestedVisibilityParserTests.m; sourceTree = "<group>"; };
+		CE1BED2B1CCCD380008DE34D /* DropboxResolvedVisibilityParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxResolvedVisibilityParserTests.m; sourceTree = "<group>"; };
+		CE1BED321CCCD87D008DE34D /* DropboxSharedLinkAccessFailureReasonParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkAccessFailureReasonParserTests.m; sourceTree = "<group>"; };
+		CE1BED3D1CCCE086008DE34D /* DropboxLinkPermissionsDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxLinkPermissionsDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE1BED471CCCE56F008DE34D /* DropboxTeamMemberInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTeamMemberInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE1BED551CCD073B008DE34D /* DropboxSharedLinkMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE26170B1CC4F05600E46B7A /* DropboxGetTemporaryLinkResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetTemporaryLinkResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE268FEF1CC7D105002725BF /* DropboxRestoreArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRestoreArgTests.m; sourceTree = "<group>"; };
+		CE268FF51CC7E7BB002725BF /* DropboxRestoreArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRestoreArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2A113C1CD1FDAE00CDC1B5 /* DropboxSharedFolderMemberPolicyParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedFolderMemberPolicyParserTests.m; sourceTree = "<group>"; };
+		CE2A11441CD1FF9400CDC1B5 /* DropboxSharedFolderJoinPolicyParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedFolderJoinPolicyParserTests.m; sourceTree = "<group>"; };
+		CE2A114C1CD201FC00CDC1B5 /* DropboxSharedLinkCreatePolicyParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkCreatePolicyParserTests.m; sourceTree = "<group>"; };
+		CE2A11561CD205F400CDC1B5 /* DropboxTeamSharingPoliciesDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTeamSharingPoliciesDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A11601CD2098D00CDC1B5 /* DropboxFullTeamDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFullTeamDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A116A1CD2147200CDC1B5 /* DropboxFullAccountDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFullAccountDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A11801CD219E900CDC1B5 /* DropboxIndividualSpaceAllocationDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxIndividualSpaceAllocationDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A118A1CD21B9600CDC1B5 /* DropboxTeamSpaceAllocationDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTeamSpaceAllocationDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A119A1CD21F8C00CDC1B5 /* DropboxSpaceAllocationDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSpaceAllocationDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A11A01CD220F500CDC1B5 /* DropboxSpaceUsageDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSpaceUsageDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A11A21CD227B700CDC1B5 /* DropboxViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxViewModel.h; sourceTree = "<group>"; };
+		CE2A11A31CD227B700CDC1B5 /* DropboxViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxViewModel.m; sourceTree = "<group>"; };
+		CE2A11A51CD2317700CDC1B5 /* DropboxViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropboxViewModelProtocol.h; sourceTree = "<group>"; };
+		CE2A11A81CD24EFE00CDC1B5 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		CE2A99061CBF934F003A34CD /* DropboxHttpHelperTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxHttpHelperTests.m; sourceTree = "<group>"; };
+		CE2A9E8F1CC9FBA6001459AB /* DropboxDropboxAccessLevelDictionarySeriailzerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDropboxAccessLevelDictionarySeriailzerTests.m; sourceTree = "<group>"; };
+		CE2A9E951CC9FF75001459AB /* DropboxMemberSelectorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberSelectorTests.m; sourceTree = "<group>"; };
+		CE2A9E9B1CCA01BC001459AB /* DropboxMemberSelectorDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberSelectorDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2A9EA11CCA0602001459AB /* DropboxAddMemberTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAddMemberTests.m; sourceTree = "<group>"; };
+		CE2A9EA71CCA074B001459AB /* DropboxAddMemberDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAddMemberDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2A9EA91CCA0BA6001459AB /* DropboxAddFolderMemberArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAddFolderMemberArgTests.m; sourceTree = "<group>"; };
+		CE2A9EAF1CCA0DDF001459AB /* DropboxAddFolderMemberArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAddFolderMemberArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2A9EBC1CCA45AF001459AB /* DropboxPollArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxPollArgTests.m; sourceTree = "<group>"; };
+		CE2A9EC21CCA46FD001459AB /* DropboxPollArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxPollArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2A9ED21CCA52DB001459AB /* DropboxJobStatusResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxJobStatusResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9EE01CCA6660001459AB /* DropboxFolderPolicyDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFolderPolicyDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9EEA1CCA6938001459AB /* DropboxTeamDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTeamDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9EF41CCA741F001459AB /* DropboxFolderPermissionDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFolderPermissionDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9EFE1CCA7FA8001459AB /* DropboxAccessLevelDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAccessLevelDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9F001CCA8A31001459AB /* DropboxSharedFolderMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedFolderMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2A9F0A1CCAADB2001459AB /* DropboxShareFolderJobStatusResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxShareFolderJobStatusResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B082F1CBE892D00CD5B42 /* DropboxCreateFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxCreateFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08301CBE892D00CD5B42 /* DropboxCreateFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxCreateFolderArgTests.m; sourceTree = "<group>"; };
+		CE2B08311CBE892D00CD5B42 /* DropboxDeleteArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDeleteArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08321CBE892D00CD5B42 /* DropboxDeleteArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDeleteArgTests.m; sourceTree = "<group>"; };
+		CE2B08331CBE892D00CD5B42 /* DropboxDimensionsDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDimensionsDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08341CBE892D00CD5B42 /* DropboxDimensionsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDimensionsTests.m; sourceTree = "<group>"; };
+		CE2B08351CBE892D00CD5B42 /* DropboxDownloadArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDownloadArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08361CBE892D00CD5B42 /* DropboxDownloadArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxDownloadArgTests.m; sourceTree = "<group>"; };
+		CE2B08371CBE892D00CD5B42 /* DropboxFileMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFileMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08381CBE892D00CD5B42 /* DropboxFileSharingInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFileSharingInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08391CBE892D00CD5B42 /* DropboxFileSystemSharingInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFileSystemSharingInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B083A1CBE892D00CD5B42 /* DropboxFolderMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFolderMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B083B1CBE892D00CD5B42 /* DropboxFolderSharingInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFolderSharingInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B083C1CBE892D00CD5B42 /* DropboxGetMetadataArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetMetadataArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B083D1CBE892D00CD5B42 /* DropboxGetMetadataArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetMetadataArgTests.m; sourceTree = "<group>"; };
+		CE2B083E1CBE892D00CD5B42 /* DropboxGetPreviewArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetPreviewArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B083F1CBE892D00CD5B42 /* DropboxGetPreviewArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetPreviewArgTests.m; sourceTree = "<group>"; };
+		CE2B08401CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetTemporaryLinkArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08411CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetTemporaryLinkArgTests.m; sourceTree = "<group>"; };
+		CE2B08421CBE892D00CD5B42 /* DropboxGetThumbnailArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetThumbnailArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08431CBE892D00CD5B42 /* DropboxGetThumbnailArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetThumbnailArgTests.m; sourceTree = "<group>"; };
+		CE2B08441CBE892D00CD5B42 /* DropboxGpsCoordinatesDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGpsCoordinatesDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08451CBE892D00CD5B42 /* DropboxGpsCoordinatesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGpsCoordinatesTests.m; sourceTree = "<group>"; };
+		CE2B08461CBE892D00CD5B42 /* DropboxListFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08471CBE892D00CD5B42 /* DropboxListFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderArgTests.m; sourceTree = "<group>"; };
+		CE2B08481CBE892D00CD5B42 /* DropboxListFolderContinueArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderContinueArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08491CBE892D00CD5B42 /* DropboxListFolderContinueArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderContinueArgTests.m; sourceTree = "<group>"; };
+		CE2B084A1CBE892D00CD5B42 /* DropboxListFolderGetLatestCursorResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderGetLatestCursorResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B084B1CBE892D00CD5B42 /* DropboxListFolderLongpollArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderLongpollArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B084C1CBE892D00CD5B42 /* DropboxListFolderLongpollArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderLongpollArgTests.m; sourceTree = "<group>"; };
+		CE2B084D1CBE892D00CD5B42 /* DropboxListFolderLongpollResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderLongpollResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B084E1CBE892D00CD5B42 /* DropboxListFolderResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B084F1CBE892D00CD5B42 /* DropboxListRevisionsArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListRevisionsArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08501CBE892D00CD5B42 /* DropboxListRevisionsArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListRevisionsArgTests.m; sourceTree = "<group>"; };
+		CE2B08511CBE892D00CD5B42 /* DropboxListRevisionsResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListRevisionsResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08521CBE892D00CD5B42 /* DropboxMediaInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMediaInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08531CBE892D00CD5B42 /* DropboxMediaMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMediaMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08541CBE892D00CD5B42 /* DropboxMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08551CBE892D00CD5B42 /* DropboxPhotoMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxPhotoMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2B08561CBE892D00CD5B42 /* DropboxRelocationArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRelocationArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2B08571CBE892D00CD5B42 /* DropboxRelocationArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRelocationArgTests.m; sourceTree = "<group>"; };
+		CE2B08581CBE892D00CD5B42 /* DropboxRoutesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRoutesTests.m; sourceTree = "<group>"; };
+		CE2B08591CBE892D00CD5B42 /* DropboxStringToDateConverterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxStringToDateConverterTests.m; sourceTree = "<group>"; };
+		CE2B085A1CBE892D00CD5B42 /* DropboxThumbnailFormatToStringSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxThumbnailFormatToStringSerializerTests.m; sourceTree = "<group>"; };
+		CE2B085B1CBE892D00CD5B42 /* DropboxThumbnailSizeToStringSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxThumbnailSizeToStringSerializerTests.m; sourceTree = "<group>"; };
+		CE2B085C1CBE892D00CD5B42 /* DropboxVideoMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxVideoMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13A71CCF416B00812AE2 /* DropboxUserInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUserInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13B51CCF4CA800812AE2 /* DropboxMemberActionParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberActionParserTests.m; sourceTree = "<group>"; };
+		CE2C13B71CCF4FAE00812AE2 /* DropboxPermissionDeniedReasonParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxPermissionDeniedReasonParserTests.m; sourceTree = "<group>"; };
+		CE2C13B91CCF512D00812AE2 /* DropboxMemberPermissionDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberPermissionDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13C31CCF579700812AE2 /* DropboxUserMembershipInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUserMembershipInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13CF1CCF5E3D00812AE2 /* DropboxGroupTypeParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGroupTypeParserTests.m; sourceTree = "<group>"; };
+		CE2C13D91CCF627300812AE2 /* DropboxGroupInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGroupInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13EB1CCF682700812AE2 /* DropboxGroupMembershipInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGroupMembershipInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13F51CCF6FCA00812AE2 /* DropboxInviteeInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxInviteeInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C13FF1CCF717700812AE2 /* DropboxInviteeMembershipInfoDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxInviteeMembershipInfoDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C14091CCF7B9B00812AE2 /* DropboxSharedFolderMembersDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedFolderMembersDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C14131CCF7E4900812AE2 /* DropboxListFolerMembersContinueArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolerMembersContinueArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C14191CCF81C300812AE2 /* DropboxListFoldersArgsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFoldersArgsTests.m; sourceTree = "<group>"; };
+		CE2C141F1CCF841000812AE2 /* DropboxListFoldersArgsDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFoldersArgsDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C14291CCF86F100812AE2 /* DropboxListFoldersResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFoldersResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C142F1CCF88EA00812AE2 /* DropboxListFoldersContinueArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFoldersContinueArgTests.m; sourceTree = "<group>"; };
+		CE2C14351CCF89E500812AE2 /* DropboxListFoldersContinueArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFoldersContinueArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C143B1CCF909400812AE2 /* DropboxListSharedLinksArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListSharedLinksArgTests.m; sourceTree = "<group>"; };
+		CE2C14411CCF932100812AE2 /* DropboxListSharedLinksArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListSharedLinksArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C144B1CCF97F600812AE2 /* DropboxListSharedLinkResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListSharedLinkResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE2C14511CCF9AA600812AE2 /* DropboxModifySharedLinkSettingsArgsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxModifySharedLinkSettingsArgsTests.m; sourceTree = "<group>"; };
+		CE2C14571CCF9D2E00812AE2 /* DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C145D1CCFA03C00812AE2 /* DropboxMountFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMountFolderArgTests.m; sourceTree = "<group>"; };
+		CE2C14631CCFA0F200812AE2 /* DropboxMountFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMountFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C14691CCFA30000812AE2 /* DropboxRelinquishFolderMembershipArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRelinquishFolderMembershipArgTests.m; sourceTree = "<group>"; };
+		CE2C146F1CCFA39100812AE2 /* DropboxRelinquishFolderMembershipDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRelinquishFolderMembershipDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C147D1CCFC0D200812AE2 /* DropboxRemoveFolderMemberArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRemoveFolderMemberArgTests.m; sourceTree = "<group>"; };
+		CE2C14861CCFC22A00812AE2 /* DropboxRemoveFolderMemberArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRemoveFolderMemberArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE2C14961CCFC75D00812AE2 /* DropboxLaunchEmptyResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxLaunchEmptyResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE64F4191CE5A24800178047 /* Картинка.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Картинка.jpg"; sourceTree = "<group>"; };
+		CE66A17E1CCDFE50009FFF3B /* DropboxFileLinkMetadataDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFileLinkMetadataDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE66A1841CCE0203009FFF3B /* DropboxSharedLinkMetadataParseManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkMetadataParseManagerTests.m; sourceTree = "<group>"; };
+		CE66A1971CCE150F009FFF3B /* DropboxGetMetadataArgsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetMetadataArgsTests.m; sourceTree = "<group>"; };
+		CE66A19F1CCE1898009FFF3B /* DropboxFolderActionSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxFolderActionSerializerTests.m; sourceTree = "<group>"; };
+		CE66A1A51CCE1F01009FFF3B /* DropboxGetMetadataArgsDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetMetadataArgsDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE66A1AB1CCE23C5009FFF3B /* DropboxGetSharedLinkMetadataArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetSharedLinkMetadataArgTests.m; sourceTree = "<group>"; };
+		CE66A1B11CCE24FB009FFF3B /* DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE66A1C51CCE3757009FFF3B /* DropboxMemberActionSerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberActionSerializerTests.m; sourceTree = "<group>"; };
+		CE66A1C71CCE3CFC009FFF3B /* DropboxListFolderMembersArgsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderMembersArgsTests.m; sourceTree = "<group>"; };
+		CE66A1CD1CCE401B009FFF3B /* DropboxListFolderMembersArgsDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxListFolderMembersArgsDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B5F01CC8BF1A009FEDA0 /* DropboxSearchArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSearchArgTests.m; sourceTree = "<group>"; };
+		CE67B5F61CC8C1F2009FEDA0 /* DropboxSearchArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSearchArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B5FE1CC8C87B009FEDA0 /* DropboxSearchMatchTypeParseManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSearchMatchTypeParseManagerTests.m; sourceTree = "<group>"; };
+		CE67B60C1CC8D125009FEDA0 /* DropboxSearchMatchDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSearchMatchDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE67B6121CC8D6EE009FEDA0 /* DropboxSearchResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSearchResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE67B61C1CC8DDE1009FEDA0 /* DropboxWriteModeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxWriteModeTests.m; sourceTree = "<group>"; };
+		CE67B6221CC8E0F7009FEDA0 /* DropboxWriteModeDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxWriteModeDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B6251CC8E41E009FEDA0 /* DropboxCommitInfoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxCommitInfoTests.m; sourceTree = "<group>"; };
+		CE67B62F1CC8E9C1009FEDA0 /* DateToDropboxStringConverterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateToDropboxStringConverterTests.m; sourceTree = "<group>"; };
+		CE67B6311CC8EDF3009FEDA0 /* DropboxCommitInfo+DictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DropboxCommitInfo+DictionarySerializerTests.m"; sourceTree = "<group>"; };
+		CE67B6371CC91AF3009FEDA0 /* DropboxUploadSessionCursorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionCursorTests.m; sourceTree = "<group>"; };
+		CE67B6411CC91C8F009FEDA0 /* DropboxUploadSessionCursorDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionCursorDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B6431CC91DE6009FEDA0 /* DropboxUploadSessionAppendArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionAppendArgTests.m; sourceTree = "<group>"; };
+		CE67B6491CC91F33009FEDA0 /* DropboxUploadSessionAppendArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionAppendArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B64F1CC93453009FEDA0 /* DropboxUploadSessionFinishArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionFinishArgTests.m; sourceTree = "<group>"; };
+		CE67B6551CC93689009FEDA0 /* DropboxUploadSessionFinishArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionFinishArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B65B1CC9598B009FEDA0 /* DropboxUploadSessionStartArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionStartArgTests.m; sourceTree = "<group>"; };
+		CE67B6611CC95A38009FEDA0 /* DropboxUploadSessionStartArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionStartArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE67B66B1CC95BCF009FEDA0 /* DropboxUploadSessionStartResultDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUploadSessionStartResultDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE6AC8F41CE3412400365B04 /* DropboxNSURLFileOperationsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxNSURLFileOperationsTests.m; sourceTree = "<group>"; };
+		CE7ED6A71CD0A91300C29086 /* DropboxRevokeSharedLinkArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRevokeSharedLinkArgTests.m; sourceTree = "<group>"; };
+		CE7ED6AD1CD0AA0F00C29086 /* DropboxRevokeSharedLinkArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxRevokeSharedLinkArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED6BD1CD0AF5200C29086 /* DropboxMemberPolicySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxMemberPolicySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED6C31CD0B05800C29086 /* DropboxAclUpdatePolicySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAclUpdatePolicySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED6C91CD0B44100C29086 /* DropboxSharedLinkPolicySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxSharedLinkPolicySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED6CB1CD0B6FA00C29086 /* DropboxShareFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxShareFolderArgTests.m; sourceTree = "<group>"; };
+		CE7ED6D11CD0B90F00C29086 /* DropboxShareFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxShareFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED6D91CD0BFB500C29086 /* DropboxShareFolderLaunchEnumParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxShareFolderLaunchEnumParserTests.m; sourceTree = "<group>"; };
+		CE7ED6E31CD0C4D900C29086 /* DropboxShareFolderLaunchDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxShareFolderLaunchDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE7ED6E91CD0DBA300C29086 /* DropboxTransferFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTransferFolderArgTests.m; sourceTree = "<group>"; };
+		CE7ED6FB1CD0E00600C29086 /* DropboxTransferFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxTransferFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED7011CD0E2B500C29086 /* DropboxUnmountFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUnmountFolderArgTests.m; sourceTree = "<group>"; };
+		CE7ED7071CD0E35D00C29086 /* DropboxUnmountFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUnmountFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED70D1CD0E52500C29086 /* DropboxUnshareFolderArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUnshareFolderArgTests.m; sourceTree = "<group>"; };
+		CE7ED7131CD0E5FC00C29086 /* DropboxUnshareFolderArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUnshareFolderArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED7191CD0E9C100C29086 /* DropboxUpdateFolderMemberArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUpdateFolderMemberArgTests.m; sourceTree = "<group>"; };
+		CE7ED71F1CD0EC2900C29086 /* DropboxUpdateFolderMemberArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUpdateFolderMemberArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED7251CD0EF9100C29086 /* DropboxUpdateFolderPolicyArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUpdateFolderPolicyArgTests.m; sourceTree = "<group>"; };
+		CE7ED72B1CD0F38F00C29086 /* DropboxUpdateFolderPolicyArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxUpdateFolderPolicyArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED7311CD1086800C29086 /* DropboxGetAccountArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetAccountArgTests.m; sourceTree = "<group>"; };
+		CE7ED7371CD1092B00C29086 /* DropboxGetAccountArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetAccountArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED7411CD10AEA00C29086 /* DropboxNameDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxNameDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE7ED74B1CD10EEC00C29086 /* DropboxBasicAccountDictionaryParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxBasicAccountDictionaryParserTests.m; sourceTree = "<group>"; };
+		CE7ED7511CD119BC00C29086 /* DropboxGetAccountBatchArgTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetAccountBatchArgTests.m; sourceTree = "<group>"; };
+		CE7ED7571CD11DCD00C29086 /* DropboxGetAccountBatchArgDictionarySerializerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxGetAccountBatchArgDictionarySerializerTests.m; sourceTree = "<group>"; };
+		CE7ED75F1CD12ABA00C29086 /* DropboxAccountTypeParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropboxAccountTypeParserTests.m; sourceTree = "<group>"; };
+		E765B9511CAFE57F19F47043 /* Pods_ObjectiveDropbox_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectiveDropbox_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2A11A91CD24EFE00CDC1B5 /* WebKit.framework in Frameworks */,
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				5BC36CA90F58A4656CBB0839 /* Pods_ObjectiveDropbox_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2A11AA1CD25DB600CDC1B5 /* WebKit.framework in Frameworks */,
+				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				45DE519CF22619C2161E3B0A /* Pods_ObjectiveDropbox_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FCA60D596A3055547AE2943 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				41898A8CDE0D4B23915627CD /* Pods-ObjectiveDropbox_Example.debug.xcconfig */,
+				1F872D5A190CBBA3E0578448 /* Pods-ObjectiveDropbox_Example.release.xcconfig */,
+				52339442F16BE6EAA5D25939 /* Pods-ObjectiveDropbox_Tests.debug.xcconfig */,
+				3C6357A32753340BF87E6C90 /* Pods-ObjectiveDropbox_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for ObjectiveDropbox */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				0FCA60D596A3055547AE2943 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* ObjectiveDropbox_Example.app */,
+				6003F5AE195388D20070C39A /* ObjectiveDropbox_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE2A11A81CD24EFE00CDC1B5 /* WebKit.framework */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				E765B9511CAFE57F19F47043 /* Pods_ObjectiveDropbox_Example.framework */,
+				8DC78E1EEF8C5CAE6B32BA79 /* Pods_ObjectiveDropbox_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for ObjectiveDropbox */ = {
+			isa = PBXGroup;
+			children = (
+				6003F59C195388D20070C39A /* DropboxAppDelegate.h */,
+				6003F59D195388D20070C39A /* DropboxAppDelegate.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				6003F5A5195388D20070C39A /* DropboxViewController.h */,
+				6003F5A6195388D20070C39A /* DropboxViewController.m */,
+				CE2A11A51CD2317700CDC1B5 /* DropboxViewModelProtocol.h */,
+				CE2A11A21CD227B700CDC1B5 /* DropboxViewModel.h */,
+				CE2A11A31CD227B700CDC1B5 /* DropboxViewModel.m */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+			);
+			name = "Example for ObjectiveDropbox";
+			path = ObjectiveDropbox;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE64F4191CE5A24800178047 /* Картинка.jpg */,
+				6003F595195388D20070C39A /* ObjectiveDropbox-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* ObjectiveDropbox-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B6195388D20070C39A /* Supporting Files */,
+				CE2B08C21CBE908600CD5B42 /* Serializers */,
+				CE2B08C31CBE90A500CD5B42 /* Args */,
+				CE2B08C41CBE90C000CD5B42 /* Parsers */,
+				CE2B08C51CBE90D000CD5B42 /* Results */,
+				CE2B08C61CBE90D900CD5B42 /* Converters */,
+				CE2B08581CBE892D00CD5B42 /* DropboxRoutesTests.m */,
+				CE2A99061CBF934F003A34CD /* DropboxHttpHelperTests.m */,
+				CE6AC8F41CE3412400365B04 /* DropboxNSURLFileOperationsTests.m */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				4225AA8918CD2871C50EEDD8 /* ObjectiveDropbox.podspec */,
+				5566F4EE560D655FA7C55620 /* README.md */,
+				1CC11C51ABFA7D43CB7BA669 /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		CE2B08C21CBE908600CD5B42 /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B082F1CBE892D00CD5B42 /* DropboxCreateFolderArgDictionarySerializerTests.m */,
+				CE2B08311CBE892D00CD5B42 /* DropboxDeleteArgDictionarySerializerTests.m */,
+				CE2B08351CBE892D00CD5B42 /* DropboxDownloadArgDictionarySerializerTests.m */,
+				CE2B083C1CBE892D00CD5B42 /* DropboxGetMetadataArgDictionarySerializerTests.m */,
+				CE2B083E1CBE892D00CD5B42 /* DropboxGetPreviewArgDictionarySerializerTests.m */,
+				CE2B08401CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgDictionarySerializerTests.m */,
+				CE2B08421CBE892D00CD5B42 /* DropboxGetThumbnailArgDictionarySerializerTests.m */,
+				CE2B08461CBE892D00CD5B42 /* DropboxListFolderArgDictionarySerializerTests.m */,
+				CE2B08481CBE892D00CD5B42 /* DropboxListFolderContinueArgDictionarySerializerTests.m */,
+				CE2B084B1CBE892D00CD5B42 /* DropboxListFolderLongpollArgDictionarySerializerTests.m */,
+				CE2B084F1CBE892D00CD5B42 /* DropboxListRevisionsArgDictionarySerializerTests.m */,
+				CE2B08561CBE892D00CD5B42 /* DropboxRelocationArgDictionarySerializerTests.m */,
+				CE2B085A1CBE892D00CD5B42 /* DropboxThumbnailFormatToStringSerializerTests.m */,
+				CE2B085B1CBE892D00CD5B42 /* DropboxThumbnailSizeToStringSerializerTests.m */,
+				CE268FF51CC7E7BB002725BF /* DropboxRestoreArgDictionarySerializerTests.m */,
+				CE67B5F61CC8C1F2009FEDA0 /* DropboxSearchArgDictionarySerializerTests.m */,
+				CE67B6221CC8E0F7009FEDA0 /* DropboxWriteModeDictionarySerializerTests.m */,
+				CE67B6311CC8EDF3009FEDA0 /* DropboxCommitInfo+DictionarySerializerTests.m */,
+				CE67B6411CC91C8F009FEDA0 /* DropboxUploadSessionCursorDictionarySerializerTests.m */,
+				CE67B6491CC91F33009FEDA0 /* DropboxUploadSessionAppendArgDictionarySerializerTests.m */,
+				CE67B6551CC93689009FEDA0 /* DropboxUploadSessionFinishArgDictionarySerializerTests.m */,
+				CE67B6611CC95A38009FEDA0 /* DropboxUploadSessionStartArgDictionarySerializerTests.m */,
+				CE2A9E8F1CC9FBA6001459AB /* DropboxDropboxAccessLevelDictionarySeriailzerTests.m */,
+				CE2A9E9B1CCA01BC001459AB /* DropboxMemberSelectorDictionarySerializerTests.m */,
+				CE2A9EA71CCA074B001459AB /* DropboxAddMemberDictionarySerializerTests.m */,
+				CE2A9EAF1CCA0DDF001459AB /* DropboxAddFolderMemberArgDictionarySerializerTests.m */,
+				CE2A9EC21CCA46FD001459AB /* DropboxPollArgDictionarySerializerTests.m */,
+				CE1BED071CCCB514008DE34D /* DropboxSharedLinkSettingsDictionarySerializerTests.m */,
+				CE1BED131CCCB949008DE34D /* DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m */,
+				CE66A19F1CCE1898009FFF3B /* DropboxFolderActionSerializerTests.m */,
+				CE66A1A51CCE1F01009FFF3B /* DropboxGetMetadataArgsDictionarySerializerTests.m */,
+				CE66A1B11CCE24FB009FFF3B /* DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m */,
+				CE66A1C51CCE3757009FFF3B /* DropboxMemberActionSerializerTests.m */,
+				CE66A1CD1CCE401B009FFF3B /* DropboxListFolderMembersArgsDictionarySerializerTests.m */,
+				CE2C14131CCF7E4900812AE2 /* DropboxListFolerMembersContinueArgDictionarySerializerTests.m */,
+				CE2C141F1CCF841000812AE2 /* DropboxListFoldersArgsDictionarySerializerTests.m */,
+				CE2C14351CCF89E500812AE2 /* DropboxListFoldersContinueArgDictionarySerializerTests.m */,
+				CE2C14411CCF932100812AE2 /* DropboxListSharedLinksArgDictionarySerializerTests.m */,
+				CE2C14571CCF9D2E00812AE2 /* DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m */,
+				CE2C14631CCFA0F200812AE2 /* DropboxMountFolderArgDictionarySerializerTests.m */,
+				CE2C146F1CCFA39100812AE2 /* DropboxRelinquishFolderMembershipDictionarySerializerTests.m */,
+				CE2C14861CCFC22A00812AE2 /* DropboxRemoveFolderMemberArgDictionarySerializerTests.m */,
+				CE7ED6AD1CD0AA0F00C29086 /* DropboxRevokeSharedLinkArgDictionarySerializerTests.m */,
+				CE7ED6BD1CD0AF5200C29086 /* DropboxMemberPolicySerializerTests.m */,
+				CE7ED6C31CD0B05800C29086 /* DropboxAclUpdatePolicySerializerTests.m */,
+				CE7ED6C91CD0B44100C29086 /* DropboxSharedLinkPolicySerializerTests.m */,
+				CE7ED6D11CD0B90F00C29086 /* DropboxShareFolderArgDictionarySerializerTests.m */,
+				CE7ED6FB1CD0E00600C29086 /* DropboxTransferFolderArgDictionarySerializerTests.m */,
+				CE7ED7071CD0E35D00C29086 /* DropboxUnmountFolderArgDictionarySerializerTests.m */,
+				CE7ED7131CD0E5FC00C29086 /* DropboxUnshareFolderArgDictionarySerializerTests.m */,
+				CE7ED71F1CD0EC2900C29086 /* DropboxUpdateFolderMemberArgDictionarySerializerTests.m */,
+				CE7ED72B1CD0F38F00C29086 /* DropboxUpdateFolderPolicyArgDictionarySerializerTests.m */,
+				CE7ED7371CD1092B00C29086 /* DropboxGetAccountArgDictionarySerializerTests.m */,
+				CE7ED7571CD11DCD00C29086 /* DropboxGetAccountBatchArgDictionarySerializerTests.m */,
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		CE2B08C31CBE90A500CD5B42 /* Args */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B08301CBE892D00CD5B42 /* DropboxCreateFolderArgTests.m */,
+				CE2B08321CBE892D00CD5B42 /* DropboxDeleteArgTests.m */,
+				CE2B08361CBE892D00CD5B42 /* DropboxDownloadArgTests.m */,
+				CE2B083D1CBE892D00CD5B42 /* DropboxGetMetadataArgTests.m */,
+				CE2B083F1CBE892D00CD5B42 /* DropboxGetPreviewArgTests.m */,
+				CE2B08411CBE892D00CD5B42 /* DropboxGetTemporaryLinkArgTests.m */,
+				CE2B08431CBE892D00CD5B42 /* DropboxGetThumbnailArgTests.m */,
+				CE2B08471CBE892D00CD5B42 /* DropboxListFolderArgTests.m */,
+				CE2B08491CBE892D00CD5B42 /* DropboxListFolderContinueArgTests.m */,
+				CE2B084C1CBE892D00CD5B42 /* DropboxListFolderLongpollArgTests.m */,
+				CE2B08501CBE892D00CD5B42 /* DropboxListRevisionsArgTests.m */,
+				CE2B08571CBE892D00CD5B42 /* DropboxRelocationArgTests.m */,
+				CE268FEF1CC7D105002725BF /* DropboxRestoreArgTests.m */,
+				CE67B5F01CC8BF1A009FEDA0 /* DropboxSearchArgTests.m */,
+				CE67B61C1CC8DDE1009FEDA0 /* DropboxWriteModeTests.m */,
+				CE67B6251CC8E41E009FEDA0 /* DropboxCommitInfoTests.m */,
+				CE67B6371CC91AF3009FEDA0 /* DropboxUploadSessionCursorTests.m */,
+				CE67B6431CC91DE6009FEDA0 /* DropboxUploadSessionAppendArgTests.m */,
+				CE67B64F1CC93453009FEDA0 /* DropboxUploadSessionFinishArgTests.m */,
+				CE67B65B1CC9598B009FEDA0 /* DropboxUploadSessionStartArgTests.m */,
+				CE2A9E951CC9FF75001459AB /* DropboxMemberSelectorTests.m */,
+				CE2A9EA11CCA0602001459AB /* DropboxAddMemberTests.m */,
+				CE2A9EA91CCA0BA6001459AB /* DropboxAddFolderMemberArgTests.m */,
+				CE2A9EBC1CCA45AF001459AB /* DropboxPollArgTests.m */,
+				CE1BED011CCCB077008DE34D /* DropboxSharedLinkSettingsTests.m */,
+				CE1BED0D1CCCB78C008DE34D /* DropboxCreateSharedLinkWithSettingsArgTests.m */,
+				CE66A1971CCE150F009FFF3B /* DropboxGetMetadataArgsTests.m */,
+				CE66A1AB1CCE23C5009FFF3B /* DropboxGetSharedLinkMetadataArgTests.m */,
+				CE66A1C71CCE3CFC009FFF3B /* DropboxListFolderMembersArgsTests.m */,
+				CE2C14191CCF81C300812AE2 /* DropboxListFoldersArgsTests.m */,
+				CE2C142F1CCF88EA00812AE2 /* DropboxListFoldersContinueArgTests.m */,
+				CE2C143B1CCF909400812AE2 /* DropboxListSharedLinksArgTests.m */,
+				CE2C14511CCF9AA600812AE2 /* DropboxModifySharedLinkSettingsArgsTests.m */,
+				CE2C145D1CCFA03C00812AE2 /* DropboxMountFolderArgTests.m */,
+				CE2C14691CCFA30000812AE2 /* DropboxRelinquishFolderMembershipArgTests.m */,
+				CE2C147D1CCFC0D200812AE2 /* DropboxRemoveFolderMemberArgTests.m */,
+				CE7ED6A71CD0A91300C29086 /* DropboxRevokeSharedLinkArgTests.m */,
+				CE7ED6CB1CD0B6FA00C29086 /* DropboxShareFolderArgTests.m */,
+				CE7ED6D91CD0BFB500C29086 /* DropboxShareFolderLaunchEnumParserTests.m */,
+				CE7ED6E91CD0DBA300C29086 /* DropboxTransferFolderArgTests.m */,
+				CE7ED7011CD0E2B500C29086 /* DropboxUnmountFolderArgTests.m */,
+				CE7ED70D1CD0E52500C29086 /* DropboxUnshareFolderArgTests.m */,
+				CE7ED7191CD0E9C100C29086 /* DropboxUpdateFolderMemberArgTests.m */,
+				CE7ED7251CD0EF9100C29086 /* DropboxUpdateFolderPolicyArgTests.m */,
+				CE7ED7311CD1086800C29086 /* DropboxGetAccountArgTests.m */,
+				CE7ED7511CD119BC00C29086 /* DropboxGetAccountBatchArgTests.m */,
+			);
+			name = Args;
+			sourceTree = "<group>";
+		};
+		CE2B08C41CBE90C000CD5B42 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B08331CBE892D00CD5B42 /* DropboxDimensionsDictionaryParserTests.m */,
+				CE2B08371CBE892D00CD5B42 /* DropboxFileMetadataDictionaryParserTests.m */,
+				CE2B08381CBE892D00CD5B42 /* DropboxFileSharingInfoDictionaryParserTests.m */,
+				CE2B08391CBE892D00CD5B42 /* DropboxFileSystemSharingInfoDictionaryParserTests.m */,
+				CE2B083A1CBE892D00CD5B42 /* DropboxFolderMetadataDictionaryParserTests.m */,
+				CE2B083B1CBE892D00CD5B42 /* DropboxFolderSharingInfoDictionaryParserTests.m */,
+				CE2B08441CBE892D00CD5B42 /* DropboxGpsCoordinatesDictionaryParserTests.m */,
+				CE2B084A1CBE892D00CD5B42 /* DropboxListFolderGetLatestCursorResultDictionaryParserTests.m */,
+				CE2B084D1CBE892D00CD5B42 /* DropboxListFolderLongpollResultDictionaryParserTests.m */,
+				CE2B084E1CBE892D00CD5B42 /* DropboxListFolderResultDictionaryParserTests.m */,
+				CE2B08511CBE892D00CD5B42 /* DropboxListRevisionsResultDictionaryParserTests.m */,
+				CE2B08521CBE892D00CD5B42 /* DropboxMediaInfoDictionaryParserTests.m */,
+				CE2B08531CBE892D00CD5B42 /* DropboxMediaMetadataDictionaryParserTests.m */,
+				CE2B08541CBE892D00CD5B42 /* DropboxMetadataDictionaryParserTests.m */,
+				CE2B08551CBE892D00CD5B42 /* DropboxPhotoMetadataDictionaryParserTests.m */,
+				CE2B085C1CBE892D00CD5B42 /* DropboxVideoMetadataDictionaryParserTests.m */,
+				CE26170B1CC4F05600E46B7A /* DropboxGetTemporaryLinkResultDictionaryParserTests.m */,
+				CE67B5FE1CC8C87B009FEDA0 /* DropboxSearchMatchTypeParseManagerTests.m */,
+				CE67B60C1CC8D125009FEDA0 /* DropboxSearchMatchDictionaryParserTests.m */,
+				CE67B6121CC8D6EE009FEDA0 /* DropboxSearchResultDictionaryParserTests.m */,
+				CE67B66B1CC95BCF009FEDA0 /* DropboxUploadSessionStartResultDictionaryParserTests.m */,
+				CE2A9ED21CCA52DB001459AB /* DropboxJobStatusResultDictionaryParserTests.m */,
+				CE2A9EE01CCA6660001459AB /* DropboxFolderPolicyDictionaryParserTests.m */,
+				CE2A9EEA1CCA6938001459AB /* DropboxTeamDictionaryParserTests.m */,
+				CE2A9EF41CCA741F001459AB /* DropboxFolderPermissionDictionaryParserTests.m */,
+				CE2A9EFE1CCA7FA8001459AB /* DropboxAccessLevelDictionaryParserTests.m */,
+				CE2A9F001CCA8A31001459AB /* DropboxSharedFolderMetadataDictionaryParserTests.m */,
+				CE2A9F0A1CCAADB2001459AB /* DropboxShareFolderJobStatusResultDictionaryParserTests.m */,
+				CE1BED231CCCD08B008DE34D /* DropboxRequestedVisibilityParserTests.m */,
+				CE1BED2B1CCCD380008DE34D /* DropboxResolvedVisibilityParserTests.m */,
+				CE1BED321CCCD87D008DE34D /* DropboxSharedLinkAccessFailureReasonParserTests.m */,
+				CE1BED3D1CCCE086008DE34D /* DropboxLinkPermissionsDictionaryParserTests.m */,
+				CE1BED471CCCE56F008DE34D /* DropboxTeamMemberInfoDictionaryParserTests.m */,
+				CE1BED551CCD073B008DE34D /* DropboxSharedLinkMetadataDictionaryParserTests.m */,
+				CE66A17E1CCDFE50009FFF3B /* DropboxFileLinkMetadataDictionaryParserTests.m */,
+				CE66A1841CCE0203009FFF3B /* DropboxSharedLinkMetadataParseManagerTests.m */,
+				CE2C13A71CCF416B00812AE2 /* DropboxUserInfoDictionaryParserTests.m */,
+				CE2C13B51CCF4CA800812AE2 /* DropboxMemberActionParserTests.m */,
+				CE2C13B71CCF4FAE00812AE2 /* DropboxPermissionDeniedReasonParserTests.m */,
+				CE2C13B91CCF512D00812AE2 /* DropboxMemberPermissionDictionaryParserTests.m */,
+				CE2C13C31CCF579700812AE2 /* DropboxUserMembershipInfoDictionaryParserTests.m */,
+				CE2C13CF1CCF5E3D00812AE2 /* DropboxGroupTypeParserTests.m */,
+				CE2C13D91CCF627300812AE2 /* DropboxGroupInfoDictionaryParserTests.m */,
+				CE2C13EB1CCF682700812AE2 /* DropboxGroupMembershipInfoDictionaryParserTests.m */,
+				CE2C13F51CCF6FCA00812AE2 /* DropboxInviteeInfoDictionaryParserTests.m */,
+				CE2C13FF1CCF717700812AE2 /* DropboxInviteeMembershipInfoDictionaryParserTests.m */,
+				CE2C14091CCF7B9B00812AE2 /* DropboxSharedFolderMembersDictionaryParserTests.m */,
+				CE2C14291CCF86F100812AE2 /* DropboxListFoldersResultDictionaryParserTests.m */,
+				CE2C144B1CCF97F600812AE2 /* DropboxListSharedLinkResultDictionaryParserTests.m */,
+				CE2C14961CCFC75D00812AE2 /* DropboxLaunchEmptyResultDictionaryParserTests.m */,
+				CE7ED6E31CD0C4D900C29086 /* DropboxShareFolderLaunchDictionaryParserTests.m */,
+				CE7ED7411CD10AEA00C29086 /* DropboxNameDictionaryParserTests.m */,
+				CE7ED74B1CD10EEC00C29086 /* DropboxBasicAccountDictionaryParserTests.m */,
+				CE7ED75F1CD12ABA00C29086 /* DropboxAccountTypeParserTests.m */,
+				CE2A113C1CD1FDAE00CDC1B5 /* DropboxSharedFolderMemberPolicyParserTests.m */,
+				CE2A11441CD1FF9400CDC1B5 /* DropboxSharedFolderJoinPolicyParserTests.m */,
+				CE2A114C1CD201FC00CDC1B5 /* DropboxSharedLinkCreatePolicyParserTests.m */,
+				CE2A11561CD205F400CDC1B5 /* DropboxTeamSharingPoliciesDictionaryParserTests.m */,
+				CE2A11601CD2098D00CDC1B5 /* DropboxFullTeamDictionaryParserTests.m */,
+				CE2A116A1CD2147200CDC1B5 /* DropboxFullAccountDictionaryParserTests.m */,
+				CE2A11801CD219E900CDC1B5 /* DropboxIndividualSpaceAllocationDictionaryParserTests.m */,
+				CE2A118A1CD21B9600CDC1B5 /* DropboxTeamSpaceAllocationDictionaryParserTests.m */,
+				CE2A119A1CD21F8C00CDC1B5 /* DropboxSpaceAllocationDictionaryParserTests.m */,
+				CE2A11A01CD220F500CDC1B5 /* DropboxSpaceUsageDictionaryParserTests.m */,
+			);
+			name = Parsers;
+			sourceTree = "<group>";
+		};
+		CE2B08C51CBE90D000CD5B42 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B08341CBE892D00CD5B42 /* DropboxDimensionsTests.m */,
+				CE2B08451CBE892D00CD5B42 /* DropboxGpsCoordinatesTests.m */,
+			);
+			name = Results;
+			sourceTree = "<group>";
+		};
+		CE2B08C61CBE90D900CD5B42 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				CE2B08591CBE892D00CD5B42 /* DropboxStringToDateConverterTests.m */,
+				CE67B62F1CC8E9C1009FEDA0 /* DateToDropboxStringConverterTests.m */,
+			);
+			name = Converters;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* ObjectiveDropbox_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ObjectiveDropbox_Example" */;
+			buildPhases = (
+				FC09A0A0F473DA4805ECEB1A /* 📦 Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				96B9B5300116BEFCEDD604C7 /* 📦 Embed Pods Frameworks */,
+				774F90F0F96F507B711AC627 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectiveDropbox_Example;
+			productName = ObjectiveDropbox;
+			productReference = 6003F58A195388D20070C39A /* ObjectiveDropbox_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* ObjectiveDropbox_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ObjectiveDropbox_Tests" */;
+			buildPhases = (
+				4B9B0125F5BDDAD635D0C493 /* 📦 Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				363CFEAF7FA32F97BB6B5DE6 /* 📦 Embed Pods Frameworks */,
+				A820849BA285C580E82823E2 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = ObjectiveDropbox_Tests;
+			productName = ObjectiveDropboxTests;
+			productReference = 6003F5AE195388D20070C39A /* ObjectiveDropbox_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Dropbox;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mikhail Motyzhenkov";
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "ObjectiveDropbox" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* ObjectiveDropbox_Example */,
+				6003F5AD195388D20070C39A /* ObjectiveDropbox_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				CE64F41A1CE5A24800178047 /* Картинка.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		363CFEAF7FA32F97BB6B5DE6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveDropbox_Tests/Pods-ObjectiveDropbox_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B9B0125F5BDDAD635D0C493 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		774F90F0F96F507B711AC627 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveDropbox_Example/Pods-ObjectiveDropbox_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96B9B5300116BEFCEDD604C7 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveDropbox_Example/Pods-ObjectiveDropbox_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A820849BA285C580E82823E2 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectiveDropbox_Tests/Pods-ObjectiveDropbox_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC09A0A0F473DA4805ECEB1A /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F59E195388D20070C39A /* DropboxAppDelegate.m in Sources */,
+				6003F5A7195388D20070C39A /* DropboxViewController.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				CE2A11A41CD227B700CDC1B5 /* DropboxViewModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2B08901CBE8AAA00CD5B42 /* DropboxDeleteArgTests.m in Sources */,
+				CE2B08921CBE8AAA00CD5B42 /* DropboxDimensionsTests.m in Sources */,
+				CE2A9E9C1CCA01BC001459AB /* DropboxMemberSelectorDictionarySerializerTests.m in Sources */,
+				CE7ED6D21CD0B90F00C29086 /* DropboxShareFolderArgDictionarySerializerTests.m in Sources */,
+				CE268FF61CC7E7BB002725BF /* DropboxRestoreArgDictionarySerializerTests.m in Sources */,
+				CE2C141A1CCF81C300812AE2 /* DropboxListFoldersArgsTests.m in Sources */,
+				CE1BED3E1CCCE086008DE34D /* DropboxLinkPermissionsDictionaryParserTests.m in Sources */,
+				CE2B089E1CBE8AAA00CD5B42 /* DropboxGetTemporaryLinkArgDictionarySerializerTests.m in Sources */,
+				CE1BED0E1CCCB78C008DE34D /* DropboxCreateSharedLinkWithSettingsArgTests.m in Sources */,
+				CE2A11A11CD220F500CDC1B5 /* DropboxSpaceUsageDictionaryParserTests.m in Sources */,
+				CE66A1CE1CCE401B009FFF3B /* DropboxListFolderMembersArgsDictionarySerializerTests.m in Sources */,
+				CE2B08A01CBE8AAA00CD5B42 /* DropboxGetThumbnailArgDictionarySerializerTests.m in Sources */,
+				CE66A1AC1CCE23C5009FFF3B /* DropboxGetSharedLinkMetadataArgTests.m in Sources */,
+				CE2A99071CBF934F003A34CD /* DropboxHttpHelperTests.m in Sources */,
+				CE2B08961CBE8AAA00CD5B42 /* DropboxFileSharingInfoDictionaryParserTests.m in Sources */,
+				CE7ED6FC1CD0E00600C29086 /* DropboxTransferFolderArgDictionarySerializerTests.m in Sources */,
+				CE2B08A41CBE8AAA00CD5B42 /* DropboxListFolderArgDictionarySerializerTests.m in Sources */,
+				CE2C14141CCF7E4900812AE2 /* DropboxListFolerMembersContinueArgDictionarySerializerTests.m in Sources */,
+				CE2A9EE11CCA6660001459AB /* DropboxFolderPolicyDictionaryParserTests.m in Sources */,
+				CE2A9EB01CCA0DDF001459AB /* DropboxAddFolderMemberArgDictionarySerializerTests.m in Sources */,
+				CE67B65C1CC9598B009FEDA0 /* DropboxUploadSessionStartArgTests.m in Sources */,
+				CE7ED7141CD0E5FC00C29086 /* DropboxUnshareFolderArgDictionarySerializerTests.m in Sources */,
+				CE2A9EEB1CCA6938001459AB /* DropboxTeamDictionaryParserTests.m in Sources */,
+				CE2B08B61CBE8AAA00CD5B42 /* DropboxRoutesTests.m in Sources */,
+				CE2B08B11CBE8AAA00CD5B42 /* DropboxMediaMetadataDictionaryParserTests.m in Sources */,
+				CE2A118B1CD21B9600CDC1B5 /* DropboxTeamSpaceAllocationDictionaryParserTests.m in Sources */,
+				CE2A9E901CC9FBA6001459AB /* DropboxDropboxAccessLevelDictionarySeriailzerTests.m in Sources */,
+				CE2B08A61CBE8AAA00CD5B42 /* DropboxListFolderContinueArgDictionarySerializerTests.m in Sources */,
+				CE67B60D1CC8D125009FEDA0 /* DropboxSearchMatchDictionaryParserTests.m in Sources */,
+				CE66A1C81CCE3CFC009FFF3B /* DropboxListFolderMembersArgsTests.m in Sources */,
+				CE2B088F1CBE8AAA00CD5B42 /* DropboxDeleteArgDictionarySerializerTests.m in Sources */,
+				CE7ED7521CD119BC00C29086 /* DropboxGetAccountBatchArgTests.m in Sources */,
+				CE7ED6C41CD0B05800C29086 /* DropboxAclUpdatePolicySerializerTests.m in Sources */,
+				CE2C14361CCF89E500812AE2 /* DropboxListFoldersContinueArgDictionarySerializerTests.m in Sources */,
+				CE67B6561CC93689009FEDA0 /* DropboxUploadSessionFinishArgDictionarySerializerTests.m in Sources */,
+				CE7ED7261CD0EF9100C29086 /* DropboxUpdateFolderPolicyArgTests.m in Sources */,
+				CE1BED141CCCB949008DE34D /* DropboxCreateSharedLinkSettingsArgDictionarySerializerTests.m in Sources */,
+				CE2B08A71CBE8AAA00CD5B42 /* DropboxListFolderContinueArgTests.m in Sources */,
+				CE7ED7321CD1086800C29086 /* DropboxGetAccountArgTests.m in Sources */,
+				CE7ED6CA1CD0B44100C29086 /* DropboxSharedLinkPolicySerializerTests.m in Sources */,
+				CE7ED7421CD10AEA00C29086 /* DropboxNameDictionaryParserTests.m in Sources */,
+				CE67B6261CC8E41E009FEDA0 /* DropboxCommitInfoTests.m in Sources */,
+				CE67B66C1CC95BCF009FEDA0 /* DropboxUploadSessionStartResultDictionaryParserTests.m in Sources */,
+				CE2B08991CBE8AAA00CD5B42 /* DropboxFolderSharingInfoDictionaryParserTests.m in Sources */,
+				CE2B08B01CBE8AAA00CD5B42 /* DropboxMediaInfoDictionaryParserTests.m in Sources */,
+				CE2A9EC31CCA46FD001459AB /* DropboxPollArgDictionarySerializerTests.m in Sources */,
+				CE2C144C1CCF97F600812AE2 /* DropboxListSharedLinkResultDictionaryParserTests.m in Sources */,
+				CE2A9EAA1CCA0BA6001459AB /* DropboxAddFolderMemberArgTests.m in Sources */,
+				CE2C14581CCF9D2E00812AE2 /* DropboxModifySharedLinkSettingsArgsDictionarySerializerTests.m in Sources */,
+				CE2B08931CBE8AAA00CD5B42 /* DropboxDownloadArgDictionarySerializerTests.m in Sources */,
+				CE2A9ED31CCA52DB001459AB /* DropboxJobStatusResultDictionaryParserTests.m in Sources */,
+				CE1BED2C1CCCD380008DE34D /* DropboxResolvedVisibilityParserTests.m in Sources */,
+				CE67B6621CC95A38009FEDA0 /* DropboxUploadSessionStartArgDictionarySerializerTests.m in Sources */,
+				CE67B61D1CC8DDE1009FEDA0 /* DropboxWriteModeTests.m in Sources */,
+				CE2B08911CBE8AAA00CD5B42 /* DropboxDimensionsDictionaryParserTests.m in Sources */,
+				CE7ED74C1CD10EEC00C29086 /* DropboxBasicAccountDictionaryParserTests.m in Sources */,
+				CE7ED6CC1CD0B6FA00C29086 /* DropboxShareFolderArgTests.m in Sources */,
+				CE66A1A01CCE1898009FFF3B /* DropboxFolderActionSerializerTests.m in Sources */,
+				CE2C13DA1CCF627300812AE2 /* DropboxGroupInfoDictionaryParserTests.m in Sources */,
+				CE7ED7581CD11DCD00C29086 /* DropboxGetAccountBatchArgDictionarySerializerTests.m in Sources */,
+				CE26170C1CC4F05600E46B7A /* DropboxGetTemporaryLinkResultDictionaryParserTests.m in Sources */,
+				CE1BED561CCD073B008DE34D /* DropboxSharedLinkMetadataDictionaryParserTests.m in Sources */,
+				CE2B08AA1CBE8AAA00CD5B42 /* DropboxListFolderLongpollArgTests.m in Sources */,
+				CE1BED241CCCD08B008DE34D /* DropboxRequestedVisibilityParserTests.m in Sources */,
+				CE7ED7381CD1092B00C29086 /* DropboxGetAccountArgDictionarySerializerTests.m in Sources */,
+				CE7ED6DA1CD0BFB500C29086 /* DropboxShareFolderLaunchEnumParserTests.m in Sources */,
+				CE2B089C1CBE8AAA00CD5B42 /* DropboxGetPreviewArgDictionarySerializerTests.m in Sources */,
+				CE2B08AE1CBE8AAA00CD5B42 /* DropboxListRevisionsArgTests.m in Sources */,
+				CE2B08A21CBE8AAA00CD5B42 /* DropboxGpsCoordinatesDictionaryParserTests.m in Sources */,
+				CE67B5FF1CC8C87B009FEDA0 /* DropboxSearchMatchTypeParseManagerTests.m in Sources */,
+				CE2C13EC1CCF682700812AE2 /* DropboxGroupMembershipInfoDictionaryParserTests.m in Sources */,
+				CE2B08971CBE8AAA00CD5B42 /* DropboxFileSystemSharingInfoDictionaryParserTests.m in Sources */,
+				CE2C14201CCF841000812AE2 /* DropboxListFoldersArgsDictionarySerializerTests.m in Sources */,
+				CE67B6441CC91DE6009FEDA0 /* DropboxUploadSessionAppendArgTests.m in Sources */,
+				CE66A1A61CCE1F01009FFF3B /* DropboxGetMetadataArgsDictionarySerializerTests.m in Sources */,
+				CE67B6421CC91C8F009FEDA0 /* DropboxUploadSessionCursorDictionarySerializerTests.m in Sources */,
+				CE2B08BA1CBE8AAA00CD5B42 /* DropboxVideoMetadataDictionaryParserTests.m in Sources */,
+				CE2A11571CD205F400CDC1B5 /* DropboxTeamSharingPoliciesDictionaryParserTests.m in Sources */,
+				CE66A1B21CCE24FB009FFF3B /* DropboxGetSharedLinkMetadataArgDictionarySerializerTests.m in Sources */,
+				CE2A114D1CD201FC00CDC1B5 /* DropboxSharedLinkCreatePolicyParserTests.m in Sources */,
+				CE2C145E1CCFA03C00812AE2 /* DropboxMountFolderArgTests.m in Sources */,
+				CE2B08B91CBE8AAA00CD5B42 /* DropboxThumbnailSizeToStringSerializerTests.m in Sources */,
+				CE7ED6A81CD0A91300C29086 /* DropboxRevokeSharedLinkArgTests.m in Sources */,
+				CE1BED481CCCE56F008DE34D /* DropboxTeamMemberInfoDictionaryParserTests.m in Sources */,
+				CE2B08AF1CBE8AAA00CD5B42 /* DropboxListRevisionsResultDictionaryParserTests.m in Sources */,
+				CE7ED6E41CD0C4D900C29086 /* DropboxShareFolderLaunchDictionaryParserTests.m in Sources */,
+				CE67B6321CC8EDF3009FEDA0 /* DropboxCommitInfo+DictionarySerializerTests.m in Sources */,
+				CE2B089B1CBE8AAA00CD5B42 /* DropboxGetMetadataArgTests.m in Sources */,
+				CE2B08B41CBE8AAA00CD5B42 /* DropboxRelocationArgDictionarySerializerTests.m in Sources */,
+				CE1BED331CCCD87D008DE34D /* DropboxSharedLinkAccessFailureReasonParserTests.m in Sources */,
+				CE7ED7081CD0E35D00C29086 /* DropboxUnmountFolderArgDictionarySerializerTests.m in Sources */,
+				CE2C13F61CCF6FCA00812AE2 /* DropboxInviteeInfoDictionaryParserTests.m in Sources */,
+				CE2B088D1CBE8AAA00CD5B42 /* DropboxCreateFolderArgDictionarySerializerTests.m in Sources */,
+				CE2A9EBD1CCA45AF001459AB /* DropboxPollArgTests.m in Sources */,
+				CE66A1981CCE150F009FFF3B /* DropboxGetMetadataArgsTests.m in Sources */,
+				CE2A9E961CC9FF75001459AB /* DropboxMemberSelectorTests.m in Sources */,
+				CE67B6501CC93453009FEDA0 /* DropboxUploadSessionFinishArgTests.m in Sources */,
+				CE2C147E1CCFC0D200812AE2 /* DropboxRemoveFolderMemberArgTests.m in Sources */,
+				CE2B089A1CBE8AAA00CD5B42 /* DropboxGetMetadataArgDictionarySerializerTests.m in Sources */,
+				CE2A9F0B1CCAADB2001459AB /* DropboxShareFolderJobStatusResultDictionaryParserTests.m in Sources */,
+				CE2B08A11CBE8AAA00CD5B42 /* DropboxGetThumbnailArgTests.m in Sources */,
+				CE2A119B1CD21F8C00CDC1B5 /* DropboxSpaceAllocationDictionaryParserTests.m in Sources */,
+				CE2C14641CCFA0F200812AE2 /* DropboxMountFolderArgDictionarySerializerTests.m in Sources */,
+				CE7ED70E1CD0E52500C29086 /* DropboxUnshareFolderArgTests.m in Sources */,
+				CE2C140A1CCF7B9B00812AE2 /* DropboxSharedFolderMembersDictionaryParserTests.m in Sources */,
+				CE7ED7601CD12ABA00C29086 /* DropboxAccountTypeParserTests.m in Sources */,
+				CE268FF01CC7D105002725BF /* DropboxRestoreArgTests.m in Sources */,
+				CE2B08AC1CBE8AAA00CD5B42 /* DropboxListFolderResultDictionaryParserTests.m in Sources */,
+				CE2C142A1CCF86F100812AE2 /* DropboxListFoldersResultDictionaryParserTests.m in Sources */,
+				CE2A11611CD2098D00CDC1B5 /* DropboxFullTeamDictionaryParserTests.m in Sources */,
+				CE2B08981CBE8AAA00CD5B42 /* DropboxFolderMetadataDictionaryParserTests.m in Sources */,
+				CE2B089F1CBE8AAA00CD5B42 /* DropboxGetTemporaryLinkArgTests.m in Sources */,
+				CE2A9EF51CCA741F001459AB /* DropboxFolderPermissionDictionaryParserTests.m in Sources */,
+				CE2C143C1CCF909400812AE2 /* DropboxListSharedLinksArgTests.m in Sources */,
+				CE2C13A81CCF416B00812AE2 /* DropboxUserInfoDictionaryParserTests.m in Sources */,
+				CE2A11811CD219E900CDC1B5 /* DropboxIndividualSpaceAllocationDictionaryParserTests.m in Sources */,
+				CE6AC8F51CE3412400365B04 /* DropboxNSURLFileOperationsTests.m in Sources */,
+				CE66A17F1CCDFE50009FFF3B /* DropboxFileLinkMetadataDictionaryParserTests.m in Sources */,
+				CE2C14521CCF9AA600812AE2 /* DropboxModifySharedLinkSettingsArgsTests.m in Sources */,
+				CE2B08A91CBE8AAA00CD5B42 /* DropboxListFolderLongpollArgDictionarySerializerTests.m in Sources */,
+				CE7ED72C1CD0F38F00C29086 /* DropboxUpdateFolderPolicyArgDictionarySerializerTests.m in Sources */,
+				CE2A9EA21CCA0602001459AB /* DropboxAddMemberTests.m in Sources */,
+				CE2C146A1CCFA30000812AE2 /* DropboxRelinquishFolderMembershipArgTests.m in Sources */,
+				CE2B08A31CBE8AAA00CD5B42 /* DropboxGpsCoordinatesTests.m in Sources */,
+				CE2B08B31CBE8AAA00CD5B42 /* DropboxPhotoMetadataDictionaryParserTests.m in Sources */,
+				CE2A9F011CCA8A31001459AB /* DropboxSharedFolderMetadataDictionaryParserTests.m in Sources */,
+				CE7ED6BE1CD0AF5200C29086 /* DropboxMemberPolicySerializerTests.m in Sources */,
+				CE2B08B81CBE8AAA00CD5B42 /* DropboxThumbnailFormatToStringSerializerTests.m in Sources */,
+				CE67B6301CC8E9C1009FEDA0 /* DateToDropboxStringConverterTests.m in Sources */,
+				CE66A1851CCE0203009FFF3B /* DropboxSharedLinkMetadataParseManagerTests.m in Sources */,
+				CE2B08B51CBE8AAA00CD5B42 /* DropboxRelocationArgTests.m in Sources */,
+				CE2C13C41CCF579700812AE2 /* DropboxUserMembershipInfoDictionaryParserTests.m in Sources */,
+				CE2A116B1CD2147200CDC1B5 /* DropboxFullAccountDictionaryParserTests.m in Sources */,
+				CE2B08951CBE8AAA00CD5B42 /* DropboxFileMetadataDictionaryParserTests.m in Sources */,
+				CE2A11451CD1FF9400CDC1B5 /* DropboxSharedFolderJoinPolicyParserTests.m in Sources */,
+				CE2C14301CCF88EA00812AE2 /* DropboxListFoldersContinueArgTests.m in Sources */,
+				CE2B08B71CBE8AAA00CD5B42 /* DropboxStringToDateConverterTests.m in Sources */,
+				CE67B5F11CC8BF1A009FEDA0 /* DropboxSearchArgTests.m in Sources */,
+				CE2C14421CCF932100812AE2 /* DropboxListSharedLinksArgDictionarySerializerTests.m in Sources */,
+				CE2C14701CCFA39100812AE2 /* DropboxRelinquishFolderMembershipDictionarySerializerTests.m in Sources */,
+				CE2B08B21CBE8AAA00CD5B42 /* DropboxMetadataDictionaryParserTests.m in Sources */,
+				CE2B088E1CBE8AAA00CD5B42 /* DropboxCreateFolderArgTests.m in Sources */,
+				CE7ED6EA1CD0DBA300C29086 /* DropboxTransferFolderArgTests.m in Sources */,
+				CE66A1C61CCE3757009FFF3B /* DropboxMemberActionSerializerTests.m in Sources */,
+				CE2B08A51CBE8AAA00CD5B42 /* DropboxListFolderArgTests.m in Sources */,
+				CE2C13B81CCF4FAE00812AE2 /* DropboxPermissionDeniedReasonParserTests.m in Sources */,
+				CE7ED71A1CD0E9C100C29086 /* DropboxUpdateFolderMemberArgTests.m in Sources */,
+				CE2C14001CCF717700812AE2 /* DropboxInviteeMembershipInfoDictionaryParserTests.m in Sources */,
+				CE67B5F71CC8C1F2009FEDA0 /* DropboxSearchArgDictionarySerializerTests.m in Sources */,
+				CE2A113D1CD1FDAE00CDC1B5 /* DropboxSharedFolderMemberPolicyParserTests.m in Sources */,
+				CE2C14971CCFC75D00812AE2 /* DropboxLaunchEmptyResultDictionaryParserTests.m in Sources */,
+				CE7ED7201CD0EC2900C29086 /* DropboxUpdateFolderMemberArgDictionarySerializerTests.m in Sources */,
+				CE2C13B61CCF4CA800812AE2 /* DropboxMemberActionParserTests.m in Sources */,
+				CE7ED6AE1CD0AA0F00C29086 /* DropboxRevokeSharedLinkArgDictionarySerializerTests.m in Sources */,
+				CE2C13BA1CCF512D00812AE2 /* DropboxMemberPermissionDictionaryParserTests.m in Sources */,
+				CE2B08941CBE8AAA00CD5B42 /* DropboxDownloadArgTests.m in Sources */,
+				CE2A9EFF1CCA7FA8001459AB /* DropboxAccessLevelDictionaryParserTests.m in Sources */,
+				CE2B08A81CBE8AAA00CD5B42 /* DropboxListFolderGetLatestCursorResultDictionaryParserTests.m in Sources */,
+				CE2C13D01CCF5E3D00812AE2 /* DropboxGroupTypeParserTests.m in Sources */,
+				CE67B6381CC91AF3009FEDA0 /* DropboxUploadSessionCursorTests.m in Sources */,
+				CE7ED7021CD0E2B500C29086 /* DropboxUnmountFolderArgTests.m in Sources */,
+				CE2B089D1CBE8AAA00CD5B42 /* DropboxGetPreviewArgTests.m in Sources */,
+				CE2B08AD1CBE8AAA00CD5B42 /* DropboxListRevisionsArgDictionarySerializerTests.m in Sources */,
+				CE67B6131CC8D6EE009FEDA0 /* DropboxSearchResultDictionaryParserTests.m in Sources */,
+				CE2C14871CCFC22A00812AE2 /* DropboxRemoveFolderMemberArgDictionarySerializerTests.m in Sources */,
+				CE2B08AB1CBE8AAA00CD5B42 /* DropboxListFolderLongpollResultDictionaryParserTests.m in Sources */,
+				CE67B64A1CC91F33009FEDA0 /* DropboxUploadSessionAppendArgDictionarySerializerTests.m in Sources */,
+				CE1BED021CCCB077008DE34D /* DropboxSharedLinkSettingsTests.m in Sources */,
+				CE67B6231CC8E0F7009FEDA0 /* DropboxWriteModeDictionarySerializerTests.m in Sources */,
+				CE1BED081CCCB514008DE34D /* DropboxSharedLinkSettingsDictionarySerializerTests.m in Sources */,
+				CE2A9EA81CCA074B001459AB /* DropboxAddMemberDictionarySerializerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* ObjectiveDropbox_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41898A8CDE0D4B23915627CD /* Pods-ObjectiveDropbox_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveDropbox/ObjectiveDropbox-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveDropbox/ObjectiveDropbox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.ObjectiveDropbox-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F872D5A190CBBA3E0578448 /* Pods-ObjectiveDropbox_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ObjectiveDropbox/ObjectiveDropbox-Prefix.pch";
+				INFOPLIST_FILE = "ObjectiveDropbox/ObjectiveDropbox-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.ObjectiveDropbox-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52339442F16BE6EAA5D25939 /* Pods-ObjectiveDropbox_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = "../**";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectiveDropbox_Example.app/ObjectiveDropbox_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C6357A32753340BF87E6C90 /* Pods-ObjectiveDropbox_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				HEADER_SEARCH_PATHS = "../**";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ObjectiveDropbox_Example.app/ObjectiveDropbox_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "ObjectiveDropbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "ObjectiveDropbox_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "ObjectiveDropbox_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

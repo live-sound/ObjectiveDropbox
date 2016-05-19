@@ -1,0 +1,18 @@
+//
+//  DropboxPhotoMetadata+DictionaryParser.m
+//  ObjectiveDropbox
+//
+//  Created by Михаил Мотыженков on 28.03.16.
+//  Copyright © 2016 Михаил Мотыженков. All rights reserved.
+//
+
+#import "DropboxPhotoMetadata+DictionaryParser.h"
+
+@implementation DropboxPhotoMetadata (DictionaryParser)
+
+- (instancetype)initWithDictionary:(NSDictionary *)dic
+{
+    return [super initWithDictionary:dic];
+}
+
+@end

@@ -1,0 +1,6 @@
+framework module ObjectiveDropbox {
+  umbrella header "ObjectiveDropbox-umbrella.h"
+
+  export *
+  module * { export * }
+}
