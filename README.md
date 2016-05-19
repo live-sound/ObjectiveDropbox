@@ -10,9 +10,9 @@ The most complete Objective-C SDK for integrating with the Dropbox API v2.
 Everything what Dropbox HTTP API v2 is capable of.
 
 ## Requirements
-Xcode >= 7.
-iOS >= 8 for CocoaPods installation.
-iOS >= 7 for manual installation.
+- Xcode >= 7
+- iOS >= 8 for CocoaPods installation
+- iOS >= 7 for manual installation
 
 ## Installation
 
