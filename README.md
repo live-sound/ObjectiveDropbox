@@ -7,7 +7,7 @@
 The most complete Objective-C SDK for integrating with the Dropbox API v2. 
 
 ## What is it capable of?
-Everything that Dropbox HTTP API v2 is capable of.
+Everything what Dropbox HTTP API v2 is capable of.
 
 ## Requirements
 Xcode >= 7.
@@ -42,7 +42,7 @@ DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp
 ```
 I recommend to use 'http://localhost' as redirectURL (don't forget to add it in your Dropbox App page).
 
-2.1. If you want to use multiple Dropbox accounts simultaneously create each DropboxClient with this initializer:
+If you want to use multiple Dropbox accounts simultaneously create each DropboxClient with this initializer:
 ```obj-c
 DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp key> redirectURL:<redirectURL> restartAllTasksAfterRelaunch:YES keychainAccount:<account string>];
 ```
@@ -53,7 +53,7 @@ DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp
 ```
 Access token will be saved to user's keychain and restored later. 
 
-3.1. If you want to change Dropbox user, use this code:
+If you want to change Dropbox user, use this code:
 ```obj-c
 dropboxClient.accessToken = nil;
 ```
