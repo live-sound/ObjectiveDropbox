@@ -7,7 +7,7 @@
 The most complete Objective-C SDK for integrating with the Dropbox API v2. 
 
 ## What is it capable of?
-Everything what Dropbox HTTP API v2 is capable of.
+Everything what Dropbox HTTP API v2 is capable of (except 'team' routes).
 
 ## Requirements
 - Xcode >= 7
