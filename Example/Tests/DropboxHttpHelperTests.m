@@ -77,5 +77,24 @@
     XCTAssertEqualObjects(resultDic, expectedDic);
 }
 
+- (void)testStringWithUnicharsFromString
+{
+    NSString *input = @"{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}";
+    NSString *expectedOutput = @"{\"path\":\"/\\u041a\\u0430\\u0440\\u0442\\u0438\\u043d\\u043a\\u0430.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}";
+    
+    NSString *output = [DropboxHttpHelper stringWithUnicharsFromString:input];
+    
+    XCTAssertTrue([output isEqualToString:expectedOutput]);
+}
+
+- (void)testStringWithUnicharsFromStringPerformance
+{
+    NSString *input = @"{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}{\"path\":\"/Картинка.jpg\",\"autorename\":false,\"mute\":false,\"mode\":\"overwrite\"}";
+    
+    [self measureBlock:^{
+        [DropboxHttpHelper stringWithUnicharsFromString:input];
+    }];
+}
+
 
 @end
