@@ -35,6 +35,18 @@
 				<string>com.apple.platform.iphonesimulator</string>
 			</dict>
 		</dict>
+		<key>F207A088-5AB1-4E69-B36E-D21A35A98DD7</key>
+		<dict>
+			<key>targetArchitecture</key>
+			<string>arm64</string>
+			<key>targetDevice</key>
+			<dict>
+				<key>modelCode</key>
+				<string>iPhone6,2</string>
+				<key>platformIdentifier</key>
+				<string>com.apple.platform.iphoneos</string>
+			</dict>
+		</dict>
 	</dict>
 </dict>
 </plist>
