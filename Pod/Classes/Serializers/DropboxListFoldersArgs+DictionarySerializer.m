@@ -22,7 +22,7 @@
         result[@"actions"] = [self.actions arrayOfStringsWithSerializer:[DropboxFolderActionSerializer class]];
     }
     
-    return result;
+    return [result copy];
 }
 
 @end

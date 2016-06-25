@@ -36,7 +36,7 @@
         result[@"shared_link_policy"] = sharedLinkPolicy;
     }
     
-    return result;
+    return [result copy];
 }
 
 @end

@@ -77,7 +77,7 @@ int const chunkSize = 2048;
     [fileHandle closeFile];
     fileHandle = nil;
     [fm removeItemAtURL:self error:error];
-    return result;
+    return [result copy];
 }
 
 - (unsigned long long)fileSizeWithError:(NSError **)error

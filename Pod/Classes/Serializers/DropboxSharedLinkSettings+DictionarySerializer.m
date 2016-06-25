@@ -27,7 +27,7 @@
     {
         result[@"expires"] = [self.expires dropboxDate];
     }
-    return result;
+    return [result copy];
 }
 
 @end

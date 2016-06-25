@@ -24,7 +24,7 @@
         result[@"link_password"] = self.linkPassword;
     }
     
-    return result;
+    return [result copy];
 }
 
 @end

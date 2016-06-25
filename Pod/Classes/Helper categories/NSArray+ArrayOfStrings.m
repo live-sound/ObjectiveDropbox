@@ -21,7 +21,7 @@
         [result addObject:string];
     }
     
-    return result;
+    return [result copy];
 }
 
 @end

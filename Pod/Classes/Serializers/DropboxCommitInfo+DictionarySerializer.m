@@ -23,7 +23,7 @@
         result[@"client_modified"] = [self.clientModified dropboxDate];
     }
     result[@"mute"] = @(self.mute);
-    return result;
+    return [result copy];
 }
 
 @end

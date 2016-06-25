@@ -23,7 +23,7 @@
         NSDictionary *dic = [goodMember dictionaryFromParams];
         [result addObject:dic];
     }
-    return result;
+    return [result copy];
 }
 
 @end

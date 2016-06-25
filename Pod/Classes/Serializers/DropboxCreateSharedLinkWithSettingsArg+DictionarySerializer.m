@@ -19,7 +19,7 @@
     {
         result[@"settings"] = [self.settings dictionaryFromParams];
     }
-    return result;
+    return [result copy];
 }
 
 @end

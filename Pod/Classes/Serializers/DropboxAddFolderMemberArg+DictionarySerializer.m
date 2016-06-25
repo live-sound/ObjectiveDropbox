@@ -21,7 +21,7 @@
     {
         result[@"custom_message"] = self.customMessage;
     }
-    return result;
+    return [result copy];
 }
 
 @end

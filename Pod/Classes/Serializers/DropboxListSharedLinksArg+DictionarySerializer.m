@@ -27,7 +27,7 @@
         result[@"direct_only"] = @(self.directOnly);
     }
     
-    return result;
+    return [result copy];
 }
 
 @end

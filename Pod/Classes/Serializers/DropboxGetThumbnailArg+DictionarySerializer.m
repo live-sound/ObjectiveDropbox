@@ -27,7 +27,7 @@
     {
         dic[@"size"] = thumbnailSizeString;
     }
-    return dic;
+    return [dic copy];
 }
 
 

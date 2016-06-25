@@ -33,7 +33,7 @@
     id value = self.dic[key];
     if (NotNull(value) && [value isKindOfClass:[NSDictionary class]])
     {
-        return value;
+        return [value copy];
     }
     return nil;
 }
@@ -43,7 +43,7 @@
     id value = self.dic[key];
     if (NotNull(value) && [value isKindOfClass:[NSArray class]])
     {
-        return value;
+        return [value copy];
     }
     return nil;
 }
@@ -65,7 +65,7 @@
         }
     }
     
-    return result;
+    return [result copy];
 }
 
 - (NSString * _Nullable)stringWithKey:(NSString * _Nonnull)key
@@ -73,7 +73,7 @@
     id value = self.dic[key];
     if (NotNull(value) && [value isKindOfClass:[NSString class]])
     {
-        return value;
+        return [value copy];
     }
     return nil;
 }
