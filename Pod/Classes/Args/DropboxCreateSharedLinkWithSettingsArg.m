@@ -13,8 +13,10 @@
 - (instancetype)initWithPath:(NSString *)path settings:(DropboxSharedLinkSettings *)settings
 {
     self = [super init];
-    _path = path;
-    _settings = settings;
+    if (self) {
+        _path = path;
+        _settings = settings;
+    }
     return self;
 }
 

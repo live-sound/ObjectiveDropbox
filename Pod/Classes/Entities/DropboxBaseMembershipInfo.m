@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _accessType = DALNotSet;
+    if (self) {
+        _accessType = DALNotSet;
+    }
     return self;
 }
 

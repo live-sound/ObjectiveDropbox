@@ -13,9 +13,11 @@
 - (instancetype)init
 {
     self = [super init];
-    _sharedFolderMemberPolicy = DSFMPNotSet;
-    _sharedFolderJoinPolicy = DSFJPNotSet;
-    _sharedLinkCreatePolicy = DSLCPNotSet;
+    if (self) {
+        _sharedFolderMemberPolicy = DSFMPNotSet;
+        _sharedFolderJoinPolicy = DSFJPNotSet;
+        _sharedLinkCreatePolicy = DSLCPNotSet;
+    }
     return self;
 }
 

@@ -16,14 +16,14 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];    
-    NSDictionary *user = [helper dictionaryWithKey:@"user"];
-    if (user)
-    {
-        self.user = [[DropboxUserInfo alloc] initWithDictionary:user];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];    
+        NSDictionary *user = [helper dictionaryWithKey:@"user"];
+        if (user)
+        {
+            self.user = [[DropboxUserInfo alloc] initWithDictionary:user];
+        }
     }
-    
     return self;
 }
 

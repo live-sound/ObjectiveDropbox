@@ -13,9 +13,11 @@
 - (instancetype)initWithUrl:(NSString *)url path:(NSString *)path linkPassword:(NSString *)linkPassword
 {
     self = [super init];
-    _url = url;
-    _path = path;
-    _linkPassword = linkPassword;
+    if (self) {
+        _url = url;
+        _path = path;
+        _linkPassword = linkPassword;
+    }
     return self;
 }
 

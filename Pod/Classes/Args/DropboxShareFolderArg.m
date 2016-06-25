@@ -13,11 +13,13 @@
 - (instancetype)initWithPath:(NSString *)path memberPolicy:(DropboxMemberPolicy)memberPolicy aclUpdatePolicy:(DropboxAclUpdatePolicy)aclUpdatePolicy sharedLinkPolicy:(DropboxSharedLinkPolicy)sharedLinkPolicy forceAsync:(BOOL)forceAsync
 {
     self = [super init];
-    _path = path;
-    _memberPolicy = memberPolicy;
-    _aclUpdatePolicy = aclUpdatePolicy;
-    _sharedLinkPolicy = sharedLinkPolicy;
-    _forceAsync = forceAsync;
+    if (self) {
+        _path = path;
+        _memberPolicy = memberPolicy;
+        _aclUpdatePolicy = aclUpdatePolicy;
+        _sharedLinkPolicy = sharedLinkPolicy;
+        _forceAsync = forceAsync;
+    }
     return self;
 }
 

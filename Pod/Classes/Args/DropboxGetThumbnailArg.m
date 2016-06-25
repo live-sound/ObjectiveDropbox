@@ -13,9 +13,11 @@
 - (instancetype)initWithPath:(NSString *)path format:(DropboxThumbnailFormat)format size:(DropboxThumbnailSize)size
 {
     self = [self init];
-    _path = path;
-    _size = size;
-    _format = format;
+    if (self) {
+        _path = path;
+        _size = size;
+        _format = format;
+    }
     return self;
 }
 

@@ -12,15 +12,29 @@
 
 - (BOOL)isEqual:(id)another
 {
-    if ([another isKindOfClass:[DropboxDimensions class]])
+    if (self == another)
     {
-        DropboxDimensions *anotherDim = (DropboxDimensions *)another;
-        return self.width == anotherDim.width && self.height == anotherDim.height;
+        return YES;
     }
-    else
+    if (![another isKindOfClass:[DropboxDimensions class]])
     {
         return NO;
     }
+    return [self isEqualToDimensions:(DropboxDimensions *)another];
+}
+
+- (BOOL)isEqualToDimensions:(DropboxDimensions *)another
+{
+    if (!another)
+    {
+        return NO;
+    }
+    return self.width == another.width && self.height == another.height;
+}
+
+- (NSUInteger)hash
+{
+    return (self.width + self.height) % NSUIntegerMax;
 }
 
 - (NSString *)description

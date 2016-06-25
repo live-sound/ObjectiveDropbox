@@ -20,4 +20,6 @@
  */
 @property (nonatomic) UInt64 width;
 
+- (BOOL)isEqualToDimensions:(DropboxDimensions *)another;
+
 @end

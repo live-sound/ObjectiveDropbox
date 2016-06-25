@@ -14,16 +14,17 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    id status = [helper stringWithKey:@".tag"];
-    if (status)
-    {
-        self.status = [self jobStatusFromString:status];
-    }
-    if (self.status == failed)
-    {
-        self.errorSummary = [DropboxJobStatusResult errorSummaryFromDictionary:dic];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        id status = [helper stringWithKey:@".tag"];
+        if (status)
+        {
+            self.status = [self jobStatusFromString:status];
+        }
+        if (self.status == failed)
+        {
+            self.errorSummary = [DropboxJobStatusResult errorSummaryFromDictionary:dic];
+        }
     }
     return self;
 }

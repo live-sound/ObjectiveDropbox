@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _type = DSANotSet;
+    if (self) {
+        _type = DSANotSet;
+    }
     return self;
 }
 

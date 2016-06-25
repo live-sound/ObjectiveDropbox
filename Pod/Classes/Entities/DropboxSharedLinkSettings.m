@@ -13,9 +13,11 @@
 - (instancetype)initWithRequestedVisibility:(DropboxRequestedVisibility)visibility linkPassword:(NSString *)linkPassword expires:(NSDate *)expires
 {
     self = [super init];
-    _requestedVisibility = visibility;
-    _linkPassword = linkPassword;
-    _expires = expires;
+    if (self) {
+        _requestedVisibility = visibility;
+        _linkPassword = linkPassword;
+        _expires = expires;
+    }
     return self;
 }
 

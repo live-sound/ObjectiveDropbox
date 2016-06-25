@@ -16,26 +16,26 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.clientModified = [helper dateWithKey:@"client_modified"];
-    self.serverModified = [helper dateWithKey:@"server_modified"];
-    self.rev = [helper stringWithKey:@"rev"];
-    self.size = [helper uint64WithKey:@"size"];
-    self.id = [helper stringWithKey:@"id"];
-    
-    id mediaInfo = [helper dictionaryWithKey:@"media_info"];
-    if (mediaInfo)
-    {
-        self.mediaInfo = [[DropboxMediaInfo alloc] initWithDictionary:mediaInfo];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.clientModified = [helper dateWithKey:@"client_modified"];
+        self.serverModified = [helper dateWithKey:@"server_modified"];
+        self.rev = [helper stringWithKey:@"rev"];
+        self.size = [helper uint64WithKey:@"size"];
+        self.id = [helper stringWithKey:@"id"];
+        
+        id mediaInfo = [helper dictionaryWithKey:@"media_info"];
+        if (mediaInfo)
+        {
+            self.mediaInfo = [[DropboxMediaInfo alloc] initWithDictionary:mediaInfo];
+        }
+        
+        id sharingInfo = [helper dictionaryWithKey:@"sharing_info"];
+        if (sharingInfo)
+        {
+            self.sharingInfo = [[DropboxFileSharingInfo alloc] initWithDictionary:sharingInfo];
+        }
     }
-    
-    id sharingInfo = [helper dictionaryWithKey:@"sharing_info"];
-    if (sharingInfo)
-    {
-        self.sharingInfo = [[DropboxFileSharingInfo alloc] initWithDictionary:sharingInfo];
-    }
-    
     return self;
 }
 

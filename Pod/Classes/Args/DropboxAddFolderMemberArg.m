@@ -12,19 +12,18 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    _sharedFolderID = @"";
-    _members = [NSArray new];
-    return self;
+    return [self initWithSharedFolderID:@"" members:[NSArray new] quiet:NO customMessage:nil];
 }
 
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID members:(NSArray<DropboxAddMember *> *)members quiet:(BOOL)quiet customMessage:(NSString *)customMessage
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
-    _members = members;
-    _quiet = quiet;
-    _customMessage = customMessage;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+        _members = members;
+        _quiet = quiet;
+        _customMessage = customMessage;
+    }
     return self;
 }
 

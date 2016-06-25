@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _type = DIINotSet;    
+    if (self) {
+        _type = DIINotSet;
+    }
     return self;
 }
 

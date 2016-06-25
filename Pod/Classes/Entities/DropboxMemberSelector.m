@@ -12,26 +12,27 @@
 
 - (instancetype)initWithEmail:(NSString *)email
 {
-    self = [super init];
-    _type = DMSEmail;
-    _value = email;
-    return self;
+    return [self initWithType:DMSEmail value:email];
 }
 
 - (instancetype)initWithDropboxID:(NSString *)dropboxID
 {
+    return [self initWithType:DMSDropboxID value:dropboxID];
+}
+
+- (instancetype)initWithType:(DropboxMemberSelectorEnum)type value:(NSString *)value
+{
     self = [super init];
-    _type = DMSDropboxID;
-    _value = dropboxID;
+    if (self) {
+        _type = type;
+        _value = value;
+    }
     return self;
 }
 
 - (instancetype)init
 {
-    self = [super init];
-    _type = DMSNotSet;
-    _value = @"";
-    return self;
+    return [self initWithType:DMSNotSet value:@""];
 }
 
 @end

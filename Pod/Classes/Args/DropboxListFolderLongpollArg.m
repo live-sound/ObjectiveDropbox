@@ -13,8 +13,10 @@
 - (instancetype)initWithCursor:(NSString *)cursor timeout:(UInt64)timeout
 {
     self = [self init];
-    _cursor = cursor;
-    _timeout = timeout;
+    if (self) {
+        _cursor = cursor;
+        _timeout = timeout;
+    }
     return self;
 }
 

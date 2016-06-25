@@ -15,11 +15,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.isDeleted = [helper boolWithKey:@"is_deleted"];    
-    self.entries = [helper arrayWithKey:@"entries" type:[DropboxFileMetadata class]];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.isDeleted = [helper boolWithKey:@"is_deleted"];    
+        self.entries = [helper arrayWithKey:@"entries" type:[DropboxFileMetadata class]];
+    }
     return self;
 }
 

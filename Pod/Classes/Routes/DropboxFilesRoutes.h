@@ -209,7 +209,7 @@
  *
  *  @return UploadTaskID
  */
-- (DropboxUploadTask * _Nonnull)upload:(DropboxCommitInfo * _Nonnull)arg sourceFileUrl:(NSURL * _Nonnull)sourceFileUrl progress:(nullable UploadTaskProgressHandler)progressBlock success:(void(^_Nullable)(DropboxFileMetadata * _Nonnull result))successBlock fail:(nullable ErrorBlock)failBlock;
+- (DropboxUploadTask * _Nullable)upload:(DropboxCommitInfo * _Nonnull)arg sourceFileUrl:(NSURL * _Nonnull)sourceFileUrl progress:(nullable UploadTaskProgressHandler)progressBlock success:(void(^_Nullable)(DropboxFileMetadata * _Nonnull result))successBlock fail:(nullable ErrorBlock)failBlock;
 
 /**
  *  Append more data to an upload session. When the parameter close is set, this call will close the session. If you call this method directly you have to split your file manually in individual small files and specify NSURL to appropriate piece. A single request should not upload more than 150 MB of file contents.

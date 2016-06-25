@@ -13,9 +13,11 @@
 - (instancetype)init
 {
     self = [super init];
-    _resolvedVisibility = DResolvedVisibilityNotSet;
-    _requestedVisibility = DRVNotSet;
-    _revokeFailureReason = DSLAFRNotSet;
+    if (self) {
+        _resolvedVisibility = DResolvedVisibilityNotSet;
+        _requestedVisibility = DRVNotSet;
+        _revokeFailureReason = DSLAFRNotSet;
+    }
     return self;
 }
 

@@ -14,10 +14,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.duration = [helper uint64WithKey:@"duration"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.duration = [helper uint64WithKey:@"duration"];
+    }
     return self;
 }
 

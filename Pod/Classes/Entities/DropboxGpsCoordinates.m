@@ -12,15 +12,32 @@
 
 - (BOOL)isEqual:(id)another
 {
-    if ([another isKindOfClass:[DropboxGpsCoordinates class]])
+    if (self == another)
     {
-        DropboxGpsCoordinates *anotherGps = (DropboxGpsCoordinates *)another;
-        return self.longitude == anotherGps.longitude && self.latitude == anotherGps.latitude;
+        return YES;
     }
-    else
+    
+    if (![another isKindOfClass:[DropboxGpsCoordinates class]])
     {
         return NO;
     }
+    
+    return [self isEqualToGpsCoordinates:(DropboxGpsCoordinates *)another];
+}
+
+- (BOOL)isEqualToGpsCoordinates:(DropboxGpsCoordinates *)another
+{
+    if (!another)
+    {
+        return NO;
+    }
+    
+    return self.longitude == another.longitude && self.latitude == another.latitude;
+}
+
+- (NSUInteger)hash
+{
+    return ((int)(self.latitude + self.longitude)) % NSUIntegerMax;
 }
 
 - (NSString *)description

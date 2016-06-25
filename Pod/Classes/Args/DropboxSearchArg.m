@@ -14,11 +14,13 @@
 - (instancetype)initWithPath:(NSString *)path query:(NSString *)query start:(UInt64)start maxResults:(UInt64)maxResults mode:(DropboxSearchMode)mode
 {
     self = [self init];
-    _path = path;
-    _query = query;
-    _start = start;
-    _maxResults = maxResults;
-    _mode = mode;
+    if (self) {
+        _path = path;
+        _query = query;
+        _start = start;
+        _maxResults = maxResults;
+        _mode = mode;
+    }
     return self;
 }
 

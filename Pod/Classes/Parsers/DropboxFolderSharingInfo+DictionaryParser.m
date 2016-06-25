@@ -14,10 +14,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.sharedFolderID = [helper stringWithKey:@"shared_folder_id"];
-        
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.sharedFolderID = [helper stringWithKey:@"shared_folder_id"];
+    }
     return self;
 }
 

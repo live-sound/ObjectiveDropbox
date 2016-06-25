@@ -11,7 +11,6 @@
 
 @implementation DropboxRequestedVisibilityParser
 
-
 + (DropboxRequestedVisibility)requestedVisibilityFromDictionary:(NSDictionary *)dic
 {
     DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];

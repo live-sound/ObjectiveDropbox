@@ -13,8 +13,10 @@
 - (instancetype)init
 {
     self = [super init];
-    _type = DLERNotSet;
-    _value = @"";
+    if (self) {
+        _type = DLERNotSet;
+        _value = @"";
+    }
     return self;
 }
 

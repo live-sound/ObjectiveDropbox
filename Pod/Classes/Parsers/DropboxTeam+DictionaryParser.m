@@ -14,11 +14,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.ID = [helper stringWithKey:@"id"];    
-    self.name = [helper stringWithKey:@"name"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.ID = [helper stringWithKey:@"id"];    
+        self.name = [helper stringWithKey:@"name"];
+    }
     return self;
 }
 

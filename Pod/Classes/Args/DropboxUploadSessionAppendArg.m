@@ -13,8 +13,10 @@
 - (instancetype)initWithCursor:(DropboxUploadSessionCursor *)cursor close:(BOOL)close
 {
     self = [super init];
-    _cursor = cursor;
-    _close = close;
+    if (self) {
+        _cursor = cursor;
+        _close = close;
+    }
     return self;
 }
 

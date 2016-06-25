@@ -18,49 +18,49 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.canRevoke = [helper boolWithKey:@"can_revoke"];
-    
-    id resolvedVisibility = dic[@"resolved_visibility"];
-    if (NotNull(resolvedVisibility))
-    {
-        if ([resolvedVisibility isKindOfClass:[NSDictionary class]])
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.canRevoke = [helper boolWithKey:@"can_revoke"];
+        
+        id resolvedVisibility = dic[@"resolved_visibility"];
+        if (NotNull(resolvedVisibility))
         {
-            self.resolvedVisibility = [DropboxResolvedVisibilityParser resolvedVisibilityFromDictionary:resolvedVisibility];
+            if ([resolvedVisibility isKindOfClass:[NSDictionary class]])
+            {
+                self.resolvedVisibility = [DropboxResolvedVisibilityParser resolvedVisibilityFromDictionary:resolvedVisibility];
+            }
+            else if ([resolvedVisibility isKindOfClass:[NSString class]])
+            {
+                self.resolvedVisibility = [DropboxResolvedVisibilityParser resolvedVisibilityFromString:resolvedVisibility];
+            }
         }
-        else if ([resolvedVisibility isKindOfClass:[NSString class]])
+        
+        id requestedVisibility = dic[@"requested_visibility"];
+        if (NotNull(requestedVisibility))
         {
-            self.resolvedVisibility = [DropboxResolvedVisibilityParser resolvedVisibilityFromString:resolvedVisibility];
+            if ([requestedVisibility isKindOfClass:[NSDictionary class]])
+            {
+                self.requestedVisibility = [DropboxRequestedVisibilityParser requestedVisibilityFromDictionary:requestedVisibility];
+            }
+            else if ([requestedVisibility isKindOfClass:[NSString class]])
+            {
+                self.requestedVisibility = [DropboxRequestedVisibilityParser requestedVisibilityFromString:requestedVisibility];
+            }
+        }
+        
+        id revokeFailureReason = dic[@"revoke_failure_reason"];
+        if (NotNull(revokeFailureReason))
+        {
+            if ([revokeFailureReason isKindOfClass:[NSDictionary class]])
+            {
+                self.revokeFailureReason = [DropboxSharedLinkAccessFailureReasonParser reasonFromDictionary:revokeFailureReason];
+            }
+            else if ([revokeFailureReason isKindOfClass:[NSString class]])
+            {
+                self.revokeFailureReason = [DropboxSharedLinkAccessFailureReasonParser reasonFromString:revokeFailureReason];
+            }
         }
     }
-    
-    id requestedVisibility = dic[@"requested_visibility"];
-    if (NotNull(requestedVisibility))
-    {
-        if ([requestedVisibility isKindOfClass:[NSDictionary class]])
-        {
-            self.requestedVisibility = [DropboxRequestedVisibilityParser requestedVisibilityFromDictionary:requestedVisibility];
-        }
-        else if ([requestedVisibility isKindOfClass:[NSString class]])
-        {
-            self.requestedVisibility = [DropboxRequestedVisibilityParser requestedVisibilityFromString:requestedVisibility];
-        }
-    }
-    
-    id revokeFailureReason = dic[@"revoke_failure_reason"];
-    if (NotNull(revokeFailureReason))
-    {
-        if ([revokeFailureReason isKindOfClass:[NSDictionary class]])
-        {
-            self.revokeFailureReason = [DropboxSharedLinkAccessFailureReasonParser reasonFromDictionary:revokeFailureReason];
-        }
-        else if ([revokeFailureReason isKindOfClass:[NSString class]])
-        {
-            self.revokeFailureReason = [DropboxSharedLinkAccessFailureReasonParser reasonFromString:revokeFailureReason];
-        }
-    }
-    
     return self;
 }
 

@@ -13,17 +13,16 @@
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID toDropboxID:(NSString *)toDropboxID
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
-    _toDropboxID = toDropboxID;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+        _toDropboxID = toDropboxID;
+    }
     return self;
 }
 
 - (instancetype)init
 {
-    self = [super init];
-    _sharedFolderID = @"";
-    _toDropboxID = @"";
-    return self;
+    return [self initWithSharedFolderID:@"" toDropboxID:@""];
 }
 
 @end

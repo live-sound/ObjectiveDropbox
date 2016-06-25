@@ -13,8 +13,10 @@
 - (instancetype)initWithMode:(DropboxWriteModeEnum)mode updateString:(NSString *)updateString
 {
     self = [super init];
-    _mode = mode;
-    _updateString = updateString;
+    if (self) {
+        _mode = mode;
+        _updateString = updateString;
+    }
     return self;
 }
 
@@ -35,9 +37,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    _mode = DWMNotSet;    
-    return self;
+    return [self initWithMode:DWMNotSet updateString:nil];    
 }
 
 @end

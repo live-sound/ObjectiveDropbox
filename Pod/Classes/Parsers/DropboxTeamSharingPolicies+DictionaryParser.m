@@ -17,26 +17,26 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    NSDictionary *sharedFolderMemberPolicy = [helper dictionaryWithKey:@"shared_folder_member_policy"];
-    if (sharedFolderMemberPolicy)
-    {
-        self.sharedFolderMemberPolicy = [DropboxSharedFolderMemberPolicyParser sharedFolderMemberPolicyFromDictionary:sharedFolderMemberPolicy];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        NSDictionary *sharedFolderMemberPolicy = [helper dictionaryWithKey:@"shared_folder_member_policy"];
+        if (sharedFolderMemberPolicy)
+        {
+            self.sharedFolderMemberPolicy = [DropboxSharedFolderMemberPolicyParser sharedFolderMemberPolicyFromDictionary:sharedFolderMemberPolicy];
+        }
+        
+        NSDictionary *sharedFolderJoinPolicy = [helper dictionaryWithKey:@"shared_folder_join_policy"];
+        if (sharedFolderJoinPolicy)
+        {
+            self.sharedFolderJoinPolicy = [DropboxSharedFolderJoinPolicyParser sharedFolderJoinPolicyFromDictionary:sharedFolderJoinPolicy];
+        }
+        
+        NSDictionary *sharedLinkCreatePolicy = [helper dictionaryWithKey:@"shared_link_create_policy"];
+        if (sharedLinkCreatePolicy)
+        {
+            self.sharedLinkCreatePolicy = [DropboxSharedLinkCreatePolicyParser sharedLinkCreatePolicyFromDictionary:sharedLinkCreatePolicy];
+        }
     }
-    
-    NSDictionary *sharedFolderJoinPolicy = [helper dictionaryWithKey:@"shared_folder_join_policy"];
-    if (sharedFolderJoinPolicy)
-    {
-        self.sharedFolderJoinPolicy = [DropboxSharedFolderJoinPolicyParser sharedFolderJoinPolicyFromDictionary:sharedFolderJoinPolicy];
-    }
-    
-    NSDictionary *sharedLinkCreatePolicy = [helper dictionaryWithKey:@"shared_link_create_policy"];
-    if (sharedLinkCreatePolicy)
-    {
-        self.sharedLinkCreatePolicy = [DropboxSharedLinkCreatePolicyParser sharedLinkCreatePolicyFromDictionary:sharedLinkCreatePolicy];
-    }
-    
     return self;
 }
 

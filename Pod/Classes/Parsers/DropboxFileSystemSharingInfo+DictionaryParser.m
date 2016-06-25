@@ -14,11 +14,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.readOnly = [helper boolWithKey:@"read_only"];
-    self.parentSharedFolderID = [helper stringWithKey:@"parent_shared_folder_id"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.readOnly = [helper boolWithKey:@"read_only"];
+        self.parentSharedFolderID = [helper stringWithKey:@"parent_shared_folder_id"];
+    }
     return self;
 }
 

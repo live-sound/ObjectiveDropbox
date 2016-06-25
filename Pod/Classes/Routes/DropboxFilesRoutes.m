@@ -140,7 +140,7 @@ const long maxSize = 150 * 1024 * 1024;
         {
             failBlock([[DropboxError alloc] initWithErrorSummary:error.localizedDescription]);
         }
-        return 0;
+        return nil;
     }
     if (size > maxSize)
     {
@@ -151,7 +151,7 @@ const long maxSize = 150 * 1024 * 1024;
             {
                 failBlock([[DropboxError alloc] initWithErrorSummary:error.localizedDescription]);
             }
-            return 0;
+            return nil;
         }
         __block int64_t realTotalBytesSent = 0;
         __block DropboxUploadTask *uploadTask = [self uploadSessionStart:[DropboxUploadSessionStartArg new] sourceFileUrl:pieces[0] progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpectedToSend) {

@@ -14,10 +14,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.cursor = [helper stringWithKey:@"cursor"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.cursor = [helper stringWithKey:@"cursor"];
+    }
     return self;
 }
 

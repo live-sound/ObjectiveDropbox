@@ -17,13 +17,13 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.users = [helper arrayWithKey:@"users" type:[DropboxUserMembershipInfo class]];
-    self.groups = [helper arrayWithKey:@"groups" type:[DropboxGroupMembershipInfo class]];
-    self.invitees = [helper arrayWithKey:@"invitees" type:[DropboxInviteeMembershipInfo class]];
-    self.cursor = [helper stringWithKey:@"cursor"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.users = [helper arrayWithKey:@"users" type:[DropboxUserMembershipInfo class]];
+        self.groups = [helper arrayWithKey:@"groups" type:[DropboxGroupMembershipInfo class]];
+        self.invitees = [helper arrayWithKey:@"invitees" type:[DropboxInviteeMembershipInfo class]];
+        self.cursor = [helper stringWithKey:@"cursor"];
+    }
     return self;
 }
 

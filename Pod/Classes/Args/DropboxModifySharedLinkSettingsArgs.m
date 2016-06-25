@@ -13,11 +13,11 @@
 - (instancetype)initWithURL:(NSString *)url settings:(DropboxSharedLinkSettings *)settings removeExpiration:(BOOL)removeExpiration
 {
     self = [self init];
-    
-    _url = url;
-    _settings = settings;
-    _removeExpiration = removeExpiration;
-    
+    if (self) {
+        _url = url;
+        _settings = settings;
+        _removeExpiration = removeExpiration;
+    }
     return self;
 }
 
@@ -29,7 +29,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _url = @"";
+    if (self) {
+        _url = @"";
+    }
     return self;
 }
 

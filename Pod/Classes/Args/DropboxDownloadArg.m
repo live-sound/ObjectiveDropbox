@@ -13,7 +13,9 @@
 - (instancetype)initWithPath:(NSString *)path
 {
     self = [self init];
-    _path = path;
+    if (self) {
+        _path = path;
+    }
     return self;
 }
 

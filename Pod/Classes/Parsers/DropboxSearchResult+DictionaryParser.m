@@ -15,12 +15,12 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.matches = [helper arrayWithKey:@"matches" type:[DropboxSearchMatch class]];    
-    self.more = [helper boolWithKey:@"more"];
-    self.start = [helper uint64WithKey:@"start"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.matches = [helper arrayWithKey:@"matches" type:[DropboxSearchMatch class]];    
+        self.more = [helper boolWithKey:@"more"];
+        self.start = [helper uint64WithKey:@"start"];
+    }
     return self;
 }
 

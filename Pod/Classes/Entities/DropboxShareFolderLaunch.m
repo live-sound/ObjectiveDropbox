@@ -14,7 +14,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _type = DSFLNotSet;
+    if (self) {
+        _type = DSFLNotSet;
+    }
     return self;
 }
 

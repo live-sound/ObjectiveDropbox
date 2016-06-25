@@ -13,8 +13,10 @@
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID leaveACopy:(BOOL)leaveACopy
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
-    _leaveACopy = leaveACopy;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+        _leaveACopy = leaveACopy;
+    }
     return self;
 }
 
@@ -25,10 +27,7 @@
 
 - (instancetype)init
 {
-    self = [super init];
-    _sharedFolderID = @"";
-    _leaveACopy = NO;
-    return self;
+    return [self initWithSharedFolderID:@""];
 }
 
 @end

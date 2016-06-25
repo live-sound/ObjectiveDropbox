@@ -15,18 +15,18 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    NSString *string = [helper stringWithKey:@".tag"];
-    if (string)
-    {
-        self.type = [DropboxLaunchEmptyResultEnumParser launchEmptyResultFromString:string];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        NSString *string = [helper stringWithKey:@".tag"];
+        if (string)
+        {
+            self.type = [DropboxLaunchEmptyResultEnumParser launchEmptyResultFromString:string];
+        }
+        if (self.type == DLERAsyncJobID)
+        {
+            self.value = [helper stringWithKey:string];
+        }
     }
-    if (self.type == DLERAsyncJobID)
-    {
-        self.value = [helper stringWithKey:string];
-    }
-    
     return self;
 }
 

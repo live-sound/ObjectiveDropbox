@@ -13,8 +13,10 @@
 - (instancetype)initWithSessionID:(NSString *)sessionID offset:(UInt64)offset
 {
     self = [super init];
-    _sessionID = sessionID;
-    _offset = offset;
+    if (self) {
+        _sessionID = sessionID;
+        _offset = offset;
+    }
     return self;
 }
 

@@ -16,24 +16,24 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    NSString *tag = [helper stringWithKey:@".tag"];
-    if (tag)
-    {
-        self.type = [DropboxShareFolderLaunchEnumParser enumFromString:tag];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        NSString *tag = [helper stringWithKey:@".tag"];
+        if (tag)
+        {
+            self.type = [DropboxShareFolderLaunchEnumParser enumFromString:tag];
+        }
+        switch (self.type) {
+            case DSFLAsyncJobID:
+                self.asyncJobIDValue = [helper stringWithKey:tag];
+                break;
+            case DSFLComplete:
+                self.completeValue = [[DropboxSharedFolderMetadata alloc] initWithDictionary:dic];
+                break;
+            default:
+                break;
+        }
     }
-    switch (self.type) {
-        case DSFLAsyncJobID:
-            self.asyncJobIDValue = [helper stringWithKey:tag];
-            break;
-        case DSFLComplete:
-            self.completeValue = [[DropboxSharedFolderMetadata alloc] initWithDictionary:dic];
-            break;
-        default:
-            break;
-    }
-    
     return self;
 }
 

@@ -14,11 +14,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.latitude = [helper float64WithKey:@"latitude"];
-    self.longitude = [helper float64WithKey:@"longitude"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.latitude = [helper float64WithKey:@"latitude"];
+        self.longitude = [helper float64WithKey:@"longitude"];
+    }
     return self;
 }
 

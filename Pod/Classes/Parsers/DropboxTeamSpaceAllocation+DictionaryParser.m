@@ -15,10 +15,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.used = [helper uint64WithKey:@"used"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.used = [helper uint64WithKey:@"used"];
+    }
     return self;
 }
 

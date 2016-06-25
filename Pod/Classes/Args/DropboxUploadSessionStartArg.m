@@ -14,7 +14,9 @@
 - (instancetype)initWithClose:(BOOL)close
 {
     self = [super init];
-    _close = close;
+    if (self) {
+        _close = close;
+    }
     return self;
 }
 

@@ -14,12 +14,12 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.name = [helper stringWithKey:@"name"];
-    self.pathLower = [helper stringWithKey:@"path_lower"];
-    self.pathDisplay = [helper stringWithKey:@"path_display"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.name = [helper stringWithKey:@"name"];
+        self.pathLower = [helper stringWithKey:@"path_lower"];
+        self.pathDisplay = [helper stringWithKey:@"path_display"];
+    }
     return self;
 }
 

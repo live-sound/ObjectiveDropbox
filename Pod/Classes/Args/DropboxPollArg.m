@@ -13,7 +13,9 @@
 - (instancetype)initWithAsyncJobID:(NSString *)asyncJobID
 {
     self = [super init];
-    _asyncJobID = asyncJobID;
+    if (self) {
+        _asyncJobID = asyncJobID;
+    }
     return self;
 }
 

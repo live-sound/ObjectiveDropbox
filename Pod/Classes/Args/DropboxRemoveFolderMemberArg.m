@@ -13,9 +13,11 @@
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID member:(DropboxMemberSelector *)member leaveACopy:(BOOL)leaveACopy
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
-    _member = member;
-    _leaveACopy = leaveACopy;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+        _member = member;
+        _leaveACopy = leaveACopy;
+    }
     return self;
 }
 

@@ -13,7 +13,10 @@
 - (instancetype)init
 {
     self = [super init];
-    _givenName = _surname = _familiarName = _displayName = @"";
+    if (self)
+    {
+        _givenName = _surname = _familiarName = _displayName = @"";
+    }
     return self;
 }
 

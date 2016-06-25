@@ -20,4 +20,6 @@
  */
 @property (nonatomic) Float64 longitude;
 
+- (BOOL)isEqualToGpsCoordinates:(DropboxGpsCoordinates *)gps;
+
 @end

@@ -16,23 +16,23 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    id status = [helper stringWithKey:@".tag"];    
-    if (status)
-    {
-        self.status = [self statusFromString:status];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        id status = [helper stringWithKey:@".tag"];    
+        if (status)
+        {
+            self.status = [self statusFromString:status];
+        }
+        
+        if (self.status == DSFJSComplete)
+        {
+            self.metadata = [[DropboxSharedFolderMetadata alloc] initWithDictionary:dic];
+        }
+        else if (self.status == DSFJSFailed)
+        {
+            self.errorSummary = [self errorSummaryFromDictionary:dic];
+        }
     }
-    
-    if (self.status == DSFJSComplete)
-    {
-        self.metadata = [[DropboxSharedFolderMetadata alloc] initWithDictionary:dic];
-    }
-    else if (self.status == DSFJSFailed)
-    {
-        self.errorSummary = [self errorSummaryFromDictionary:dic];
-    }
-    
     return self;
 }
 

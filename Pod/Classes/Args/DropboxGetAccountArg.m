@@ -13,15 +13,15 @@
 - (instancetype)initWithAccountID:(NSString *)accountID
 {
     self = [super init];
-    _accountID = accountID;
+    if (self) {
+        _accountID = accountID;
+    }
     return self;
 }
 
 - (instancetype)init
 {
-    self = [super init];
-    _accountID = @"";
-    return self;
+    return [self initWithAccountID:@""];
 }
 
 @end

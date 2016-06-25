@@ -65,8 +65,7 @@ typedef void (^AuthSuccededBlock)(NSString * _Nonnull token);
 }
 
 - (void)authorizationFinished
-{
-    // topMostViewController == nav.parentViewController ?
+{    
     [topMostViewController dismissViewControllerAnimated:YES completion:nil];
     nav = nil;
     topMostViewController = nil;

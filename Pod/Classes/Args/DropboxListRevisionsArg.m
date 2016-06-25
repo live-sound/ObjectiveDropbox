@@ -13,8 +13,10 @@
 - (instancetype)initWithPath:(NSString *)path limit:(UInt64)limit
 {
     self = [self init];
-    _path = path;
-    _limit = limit;
+    if (self) {
+        _path = path;
+        _limit = limit;
+    }
     return self;
 }
 

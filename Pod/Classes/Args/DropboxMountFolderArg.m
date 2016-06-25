@@ -13,7 +13,9 @@
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+    }
     return self;
 }
 

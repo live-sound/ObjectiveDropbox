@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _matches = [NSArray new];
+    if (self) {
+        _matches = [NSArray new];
+    }
     return self;
 }
 

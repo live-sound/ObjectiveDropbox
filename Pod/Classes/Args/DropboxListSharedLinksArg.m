@@ -13,11 +13,11 @@
 - (instancetype)initWithPath:(NSString *)path cursor:(NSString *)cursor directOnly:(BOOL)directOnly
 {
     self = [super init];
-    
-    _path = path;
-    _cursor = cursor;
-    _directOnly = directOnly;
-    
+    if (self) {
+        _path = path;
+        _cursor = cursor;
+        _directOnly = directOnly;
+    }    
     return self;
 }
 

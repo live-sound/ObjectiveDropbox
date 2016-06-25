@@ -13,8 +13,10 @@
 - (instancetype)init
 {
     self = [super init];
-    _action = DFANotSet;
-    _reason = DPDRNotSet;
+    if (self) {
+        _action = DFANotSet;
+        _reason = DPDRNotSet;
+    }
     return self;
 }
 

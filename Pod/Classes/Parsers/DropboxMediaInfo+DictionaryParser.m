@@ -16,20 +16,20 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    id pending = dic[@"pending"];
-    self.isPending = NotNull(pending);
-    
-    if (!self.isPending)    
-    {
-        id meta = [helper dictionaryWithKey:@"metadata"];
-        if (meta)
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        id pending = dic[@"pending"];
+        self.isPending = NotNull(pending);
+        
+        if (!self.isPending)    
         {
-            self.metadata = [DropboxMediaMetadataParseManager initMediaMetadataWithDictionary:meta];
+            id meta = [helper dictionaryWithKey:@"metadata"];
+            if (meta)
+            {
+                self.metadata = [DropboxMediaMetadataParseManager initMediaMetadataWithDictionary:meta];
+            }
         }
     }
-    
     return self;
 }
 

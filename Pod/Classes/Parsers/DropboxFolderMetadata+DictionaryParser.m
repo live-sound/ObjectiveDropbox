@@ -15,16 +15,16 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.id = [helper stringWithKey:@"id"];
-    
-    id folder_sharing_info = [helper dictionaryWithKey:@"sharing_info"];
-    if (folder_sharing_info)
-    {
-        self.sharingInfo = [[DropboxFolderSharingInfo alloc] initWithDictionary:folder_sharing_info];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.id = [helper stringWithKey:@"id"];
+        
+        id folder_sharing_info = [helper dictionaryWithKey:@"sharing_info"];
+        if (folder_sharing_info)
+        {
+            self.sharingInfo = [[DropboxFolderSharingInfo alloc] initWithDictionary:folder_sharing_info];
+        }
     }
-    
     return self;
 }
 

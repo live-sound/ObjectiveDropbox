@@ -13,15 +13,15 @@
 - (instancetype)initWithCursor:(NSString *)cursor
 {
     self = [self init];
-    _cursor = cursor;
+    if (self) {
+        _cursor = cursor;
+    }
     return self;
 }
 
 - (instancetype)init
 {
-    self = [super init];
-    _cursor = @"";
-    return self;
+    return [self initWithCursor:@""];
 }
 
 @end

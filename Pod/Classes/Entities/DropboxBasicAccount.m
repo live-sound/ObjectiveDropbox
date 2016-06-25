@@ -13,9 +13,11 @@
 - (instancetype)init
 {
     self = [super init];
-    _accountID = @"";
-    _email = @"";
-    _name = [DropboxName new];
+    if (self) {
+        _accountID = @"";
+        _email = @"";
+        _name = [DropboxName new];
+    }
     return self;
 }
 

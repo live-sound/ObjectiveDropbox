@@ -13,8 +13,7 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
-    self = [super initWithDictionary:dic];
-    return self;
+    return [super initWithDictionary:dic];    
 }
 
 @end

@@ -13,7 +13,9 @@
 - (instancetype)initWithCursor:(NSString *)cursor
 {
     self = [self init];
-    _cursor = cursor;
+    if (self) {
+        _cursor = cursor;
+    }
     return self;
 }
 

@@ -13,8 +13,10 @@
 - (instancetype)initWithCursor:(DropboxUploadSessionCursor *)cursor commit:(DropboxCommitInfo *)commit
 {
     self = [super init];
-    _cursor = cursor;
-    _commit = commit;
+    if (self) {
+        _cursor = cursor;
+        _commit = commit;
+    }
     return self;
 }
 

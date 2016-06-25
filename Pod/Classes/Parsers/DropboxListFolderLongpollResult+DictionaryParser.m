@@ -14,11 +14,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.changes = [helper boolWithKey:@"changes"];
-    self.backoff = [helper numberWithKey:@"backoff"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.changes = [helper boolWithKey:@"changes"];
+        self.backoff = [helper numberWithKey:@"backoff"];
+    }
     return self;
 }
 

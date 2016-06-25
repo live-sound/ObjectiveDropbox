@@ -22,7 +22,9 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    _dic = dic;
+    if (self) {
+        _dic = dic;
+    }
     return self;
 }
 

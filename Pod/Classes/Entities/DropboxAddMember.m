@@ -13,8 +13,10 @@
 - (instancetype)initWithMember:(DropboxMemberSelector *)member accessLevel:(DropboxAccessLevel)accessLevel
 {
     self = [super init];
-    _member = member;
-    _accessLevel = accessLevel;
+    if (self) {
+        _member = member;
+        _accessLevel = accessLevel;
+    }
     return self;
 }
 

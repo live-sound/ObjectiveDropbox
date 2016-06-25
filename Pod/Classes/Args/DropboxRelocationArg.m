@@ -13,8 +13,10 @@
 - (instancetype)initWithFromPath:(NSString *)fromPath toPath:(NSString *)toPath
 {
     self = [self init];
-    _fromPath = fromPath;
-    _toPath = toPath;
+    if (self) {
+        _fromPath = fromPath;
+        _toPath = toPath;
+    }
     return self;
 }
 

@@ -13,11 +13,13 @@
 - (instancetype)initWithPath:(NSString *)path recursive:(BOOL)recursive includeMediaInfo:(BOOL)includeMediaInfo includeDeleted:(BOOL)includeDeleted includeHasExplicitSharedMembers:(BOOL)includeHasExplicitSharedMembers
 {
     self = [self init];
-    _path = path;
-    _recursive = recursive;
-    _includeMediaInfo = includeMediaInfo;
-    _includeDeleted = includeDeleted;
-    _includeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
+    if (self) {
+        _path = path;
+        _recursive = recursive;
+        _includeMediaInfo = includeMediaInfo;
+        _includeDeleted = includeDeleted;
+        _includeHasExplicitSharedMembers = includeHasExplicitSharedMembers;
+    }
     return self;
 }
 

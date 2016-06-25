@@ -14,10 +14,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super initWithDictionary:dic];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.modifiedBy = [helper stringWithKey:@"modified_by"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.modifiedBy = [helper stringWithKey:@"modified_by"];
+    }
     return self;
 }
 

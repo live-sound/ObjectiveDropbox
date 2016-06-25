@@ -13,10 +13,12 @@
 - (instancetype)initWithSharedFolderID:(NSString *)sharedFolderID memberPolicy:(DropboxMemberPolicy)memberPolicy aclUpdatePolicy:(DropboxAclUpdatePolicy)aclUpdatePolicy sharedLinkPolicy:(DropboxSharedLinkPolicy)sharedLinkPolicy
 {
     self = [super init];
-    _sharedFolderID = sharedFolderID;
-    _memberPolicy = memberPolicy;
-    _aclUpdatePolicy = aclUpdatePolicy;
-    _sharedLinkPolicy = sharedLinkPolicy;
+    if (self) {
+        _sharedFolderID = sharedFolderID;
+        _memberPolicy = memberPolicy;
+        _aclUpdatePolicy = aclUpdatePolicy;
+        _sharedLinkPolicy = sharedLinkPolicy;
+    }
     return self;
 }
 

@@ -15,11 +15,11 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.entries = [helper arrayWithKey:@"entries" type:[DropboxSharedFolderMetadata class]];
-    self.cursor = [helper stringWithKey:@"cursor"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.entries = [helper arrayWithKey:@"entries" type:[DropboxSharedFolderMetadata class]];
+        self.cursor = [helper stringWithKey:@"cursor"];
+    }
     return self;
 }
 

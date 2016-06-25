@@ -13,9 +13,11 @@
 - (instancetype)initWithPath:(NSString *)path includeMediaInfo:(BOOL)includeMediaInfo includeDeleted:(BOOL)includeDeleted
 {
     self = [self init];
-    _path = path;
-    _includeMediaInfo = includeMediaInfo;
-    _includeDeleted = includeDeleted;
+    if (self) {
+        _path = path;
+        _includeMediaInfo = includeMediaInfo;
+        _includeDeleted = includeDeleted;
+    }
     return self;
 }
 

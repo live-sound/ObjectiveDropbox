@@ -91,15 +91,6 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
     return [self initWithAppKey:appKey redirectURL:redirectURL restartAllTasksAfterRelaunch:restartAllTasksAfterRelaunch keychainAccount:kAccount];
 }
 
-
-- (void)initKeychain
-{
-    if (!self.accessToken)
-    {
-        self.accessToken = [SSKeychain passwordForService:self.kKeychainService account:self.keychainAccount];
-    }
-}
-
 - (void)initRoutesAndHttpHelpers
 {
     DropboxHttpHelper *filesHelper = [DropboxHttpHelper new];
@@ -121,6 +112,14 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
     self.sharing = [[DropboxSharingRoutes alloc] initWithPath:sharingPath andWithDelegate:sharingHelper];
     self.users = [[DropboxUsersRoutes alloc] initWithPath:usersPath andWithDelegate:usersHelper];
     self.auth = [[DropboxAuthRoutes alloc] initWithPath:authPath andWithDelegate:authHelper];
+}
+
+- (void)initKeychain
+{
+    if (!self.accessToken)
+    {
+        self.accessToken = [SSKeychain passwordForService:self.kKeychainService account:self.keychainAccount];
+    }
 }
 
 - (NSString *)kKeychainService

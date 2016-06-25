@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    self.matchType = unknown;
+    if (self) {
+        self.matchType = unknown;
+    }
     return self;
 }
 

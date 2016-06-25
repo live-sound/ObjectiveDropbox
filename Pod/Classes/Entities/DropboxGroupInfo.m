@@ -13,10 +13,10 @@
 - (instancetype)init
 {
     self = [super init];
-    
-    _groupType = DGTNotSet;
-    _memberCount = -1;
-    
+    if (self) {
+        _groupType = DGTNotSet;
+        _memberCount = -1;
+    }    
     return self;
 }
 

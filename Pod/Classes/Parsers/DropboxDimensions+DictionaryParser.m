@@ -15,9 +15,11 @@
 {
     self = [self init];
     
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.width = [helper uint64WithKey:@"width"];
-    self.height = [helper uint64WithKey:@"height"];
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.width = [helper uint64WithKey:@"width"];
+        self.height = [helper uint64WithKey:@"height"];
+    }
     
     return self;
 }

@@ -13,9 +13,11 @@
 - (instancetype)init
 {
     self = [super init];
-    _memberPolicy = _resolvedMemberPolicy = DMPNotSet;
-    _aclUpdatePolicy = DAUPNotSet;
-    _sharedLinkPolicy = DSLPNotSet;
+    if (self) {
+        _memberPolicy = _resolvedMemberPolicy = DMPNotSet;
+        _aclUpdatePolicy = DAUPNotSet;
+        _sharedLinkPolicy = DSLPNotSet;
+    }
     return self;
 }
 

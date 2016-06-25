@@ -13,15 +13,15 @@
 - (instancetype)initWithURL:(NSString *)url
 {
     self = [super init];
-    _url = url;
+    if (self) {
+        _url = url;
+    }
     return self;
 }
 
 - (instancetype)init
 {
-    self = [super init];
-    _url = @"";
-    return self;
+    return [self initWithURL:@""];
 }
 
 @end

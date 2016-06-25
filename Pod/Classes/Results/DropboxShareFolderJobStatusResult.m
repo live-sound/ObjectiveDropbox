@@ -13,7 +13,9 @@
 - (instancetype)init
 {
     self = [super init];
-    _status = DSFJSNotSet;
+    if (self) {
+        _status = DSFJSNotSet;
+    }
     return self;
 }
 

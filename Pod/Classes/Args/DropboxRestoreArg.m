@@ -13,8 +13,10 @@
 - (instancetype)initWithPath:(NSString *)path rev:(NSString *)rev
 {
     self = [self init];
-    _path = path;
-    _rev = rev;
+    if (self) {
+        _path = path;
+        _rev = rev;
+    }
     return self;
 }
 

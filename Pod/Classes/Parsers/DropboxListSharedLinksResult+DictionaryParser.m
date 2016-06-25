@@ -15,12 +15,12 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.links = [helper arrayWithKey:@"links" type:[DropboxSharedLinkMetadata class]];
-    self.hasMore = [helper boolWithKey:@"has_more"];
-    self.cursor = [helper stringWithKey:@"cursor"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.links = [helper arrayWithKey:@"links" type:[DropboxSharedLinkMetadata class]];
+        self.hasMore = [helper boolWithKey:@"has_more"];
+        self.cursor = [helper stringWithKey:@"cursor"];
+    }
     return self;
 }
 

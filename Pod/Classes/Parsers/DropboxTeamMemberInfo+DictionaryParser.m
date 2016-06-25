@@ -15,14 +15,14 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [self init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    id teamInfo = [helper dictionaryWithKey:@"team_info"];
-    self.teamInfo = [[DropboxTeam alloc] initWithDictionary:teamInfo];
-    
-    self.displayName = [helper stringWithKey:@"display_name"];
-    self.memberID = [helper stringWithKey:@"member_id"];;
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        id teamInfo = [helper dictionaryWithKey:@"team_info"];
+        self.teamInfo = [[DropboxTeam alloc] initWithDictionary:teamInfo];
+        
+        self.displayName = [helper stringWithKey:@"display_name"];
+        self.memberID = [helper stringWithKey:@"member_id"];;
+    }
     return self;
 }
 

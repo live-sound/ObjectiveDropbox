@@ -14,10 +14,10 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dic
 {
     self = [super init];
-    
-    DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    self.sessionID = [helper stringWithKey:@"session_id"];
-    
+    if (self) {
+        DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
+        self.sessionID = [helper stringWithKey:@"session_id"];
+    }
     return self;
 }
 

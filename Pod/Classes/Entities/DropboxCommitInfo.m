@@ -13,11 +13,13 @@
 - (instancetype)initWithPath:(NSString *)path mode:(DropboxWriteMode *)mode autorename:(BOOL)autorename clientModified:(NSDate *)clientModified mute:(BOOL)mute
 {
     self = [super init];
-    _path = path;
-    _mode = mode;
-    _autorename = autorename;
-    _clientModified = clientModified;
-    _mute = mute;
+    if (self) {
+        _path = path;
+        _mode = mode;
+        _autorename = autorename;
+        _clientModified = clientModified;
+        _mute = mute;
+    }
     return self;
 }
 
