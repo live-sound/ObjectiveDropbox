@@ -70,7 +70,7 @@ DropboxCommitInfo *commitInfo = [[DropboxCommitInfo alloc] initWithPath:@"/myfil
                                 mode:[[DropboxWriteMode alloc] initWithOverwrite]];
 [dropboxClient.files upload:commitInfo sourceFileUrl:sourceFileURL 
 progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpectedToSend) {
-    NSLog(@"Upload progress %lli%%", totalBytesSent/totalBytesExpectedToSend);
+    NSLog(@"Upload progress %i%%", (int)(100.0 * totalBytesSent/totalBytesExpectedToSend));
 } success:^(DropboxFileMetadata * _Nonnull uploadResult) {
     NSLog(@"File uploaded: %@", uploadResult);
 } fail:^(DropboxError * _Nonnull error) {
@@ -79,7 +79,7 @@ progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpected
 ```
 See DropboxClient.h for all available methods.
 
-Your download/upload tasks will remain active in background. Each download/upload method returns task object. You can cancel, suspend and resume it.
+Each download/upload method returns a task object. You can cancel, suspend and resume it. Your download/upload tasks will remain active in background (background fetch must be ON in your target's entitlements).
 
 **If you want to be a good iOS citizen add these lines to your AppDelegate implementation:**
 ```obj-c
