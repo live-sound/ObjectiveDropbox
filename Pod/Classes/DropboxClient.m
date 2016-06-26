@@ -149,7 +149,9 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
 
 - (NSString *)appKey
 {
-    return _authViewController.appKey;
+    @synchronized (self) {
+        return _authViewController.appKey;
+    }
 }
 
 - (void)setRedirectURL:(NSString *)redirectURL
@@ -161,12 +163,16 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
 
 - (NSString *)redirectURL
 {
-    return _authViewController.redirectURL;
+    @synchronized (self) {
+        return _authViewController.redirectURL;
+    }
 }
 
 - (NSString *)accessToken
 {
-    return _accessToken;
+    @synchronized (self) {
+        return _accessToken;
+    }
 }
 
 - (void)setAccessToken:(NSString *)accessToken
@@ -190,7 +196,9 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
 
 - (NSURLSession *)rpcSession
 {
-    return _rpcSession;
+    @synchronized (self) {
+        return _rpcSession;
+    }
 }
 
 - (void)setRpcSession:(NSURLSession *)rpcSession
@@ -206,7 +214,9 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
 
 - (NSURLSession *)backgroundSession
 {
-    return _backgroundSession;
+    @synchronized (self) {
+        return _backgroundSession;
+    }
 }
 
 - (void)setBackgroundSession:(NSURLSession *)backgroundSession
