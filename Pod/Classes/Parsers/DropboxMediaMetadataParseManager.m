@@ -16,7 +16,7 @@
 + (DropboxMediaMetadata *)initMediaMetadataWithDictionary:(NSDictionary *)dic
 {
     DictionaryParseHelper *helper = [[DictionaryParseHelper alloc] initWithDictionary:dic];
-    id duration = [helper dictionaryWithKey:@"duration"];
+    id duration = [helper numberWithKey:@"duration"];
     if (duration)
     {
         return [[DropboxVideoMetadata alloc] initWithDictionary:dic];
