@@ -80,7 +80,8 @@ static NSString * const uploadFileExt = @"jpg";
         dispatch_group_enter(group);
         DropboxCommitInfo *commitInfo = [[DropboxCommitInfo alloc] initWithPath:[self getUploadedFilePath] mode:[[DropboxWriteMode alloc] initWithOverwrite]];
         [self.dropbox.files upload:commitInfo sourceFileUrl:[NSURL fileURLWithPath:[self getFilePath]] progress:^(int64_t bytesSent, int64_t totalBytesSent, int64_t totalBytesExpectedToSend) {
-            NSLog(@"Upload progress %lli%%", totalBytesSent/totalBytesExpectedToSend);
+            int percent = totalBytesSent * 100.0/totalBytesExpectedToSend;
+            NSLog(@"Upload progress %i%%", percent);
         }
         success:^(DropboxFileMetadata * _Nonnull uploadResult) {
             [self sendSuccess:[NSString stringWithFormat:@"Upload succeded with results: %@", uploadResult]];
@@ -89,15 +90,9 @@ static NSString * const uploadFileExt = @"jpg";
             dispatch_group_enter(group);
             DropboxDownloadArg *downloadArg = [[DropboxDownloadArg alloc] initWithPath:[self getUploadedFilePath]];
             NSString *filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"file.f"];
-            __block DropboxDownloadTask *downloadTask = [self.dropbox.files download:downloadArg destFileUrl:[NSURL fileURLWithPath:filePath] progress:^(int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
-                long long percent = totalBytesWritten/totalBytesExpectedToWrite;
-                NSLog(@"Download progress %lli%%", percent);
-                if (percent == 1)
-                {
-                    [downloadTask suspendWithCompletion:^{
-                        [downloadTask resume];
-                    }];                    
-                }                
+            [self.dropbox.files download:downloadArg destFileUrl:[NSURL fileURLWithPath:filePath] progress:^(int64_t bytesWritten, int64_t totalBytesWritten, int64_t totalBytesExpectedToWrite) {
+                int percent = totalBytesWritten * 100.0/totalBytesExpectedToWrite;
+                NSLog(@"Download progress %i%%", percent);
             } success:^(DropboxFileMetadata * _Nonnull metadata) {
                 [self sendSuccess:[NSString stringWithFormat:@"Download succeded with result: %@", metadata]];                
                 dispatch_group_leave(group);

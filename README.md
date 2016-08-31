@@ -10,9 +10,9 @@ The most complete Objective-C SDK for integrating with the Dropbox API v2.
 Everything what Dropbox HTTP API v2 is capable of (except Dropbox Business API).
 
 ## Requirements
-- Xcode >= 7
-- iOS >= 8 for CocoaPods installation
-- iOS >= 7 for manual installation
+- Xcode 7+
+- iOS 8+ (CocoaPods or manual installation)
+- iOS 7+ (manual installation only)
 
 ## Installation
 
@@ -54,7 +54,7 @@ DropboxClient *dropboxClient = [[DropboxClient alloc] initWithAppKey:<DropboxApp
 **Get access token before the first request:**
 (user will see Dropbox authentication UI on this step)
 ```obj-c
-[dropboxClient getNewTokenWithSuccess:^ { ...} fail:^(NSString * _Nonnull errorSummary) { ...}];
+[dropboxClient getNewTokenWithSuccess:^ { ... } fail:^(NSString * _Nonnull errorSummary) { ... }];
 ```
 Access token will be saved to user's keychain and restored later. You don't have to call that method if your dropboxClient.accessToken != nil.
 
