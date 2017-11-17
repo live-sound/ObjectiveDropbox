@@ -45,14 +45,13 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
     NSURLSession * _backgroundSession, *_rpcSession;
 }
 
-- (instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> *)viewController appKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch keychainAccount:(NSString *)keychainAccount
+- (instancetype)initWithAppKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch keychainAccount:(NSString *)keychainAccount
 {
     self = [super init];
     if (self) {
-        _authClient = [[DropboxAuthClient alloc] initWithAuthViewController:viewController andWithDelegate:self];
-        _authViewController = viewController;
-        _authViewController.appKey = appKey;
-        _authViewController.redirectURL = redirectURL;
+        _authClient = [[DropboxAuthClient alloc] initWithDelegate:self];
+        self.appKey = appKey;
+        self.redirectURL = redirectURL;
         
         _sessionDelegate = [DropboxUrlSessionDelegate new];
         _rpcSession = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:nil delegateQueue:nil];
@@ -72,18 +71,9 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
     return self;
 }
 
-- (instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> *)viewController appKey:(NSString *)appKey redirectURL:(NSString *)redirectURL keychainAccount:(NSString *)keychainAccount
+- (instancetype)initWithAppKey:(NSString *)appKey redirectURL:(NSString *)redirectURL keychainAccount:(NSString *)keychainAccount
 {
-    return [self initWithAuthViewController:viewController appKey:appKey redirectURL:redirectURL restartAllTasksAfterRelaunch:YES keychainAccount:keychainAccount];
-}
-
-- (instancetype)initWithAppKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch keychainAccount:(NSString *)keychainAccount
-{
-    DropboxAuthViewController *vc = [[DropboxAuthViewController alloc] init];
-    self = [self initWithAuthViewController:vc appKey:appKey redirectURL:redirectURL restartAllTasksAfterRelaunch:restartAllTasksAfterRelaunch keychainAccount:keychainAccount];
-    vc.delegate = _authClient;
-    vc.appKey = appKey;
-    return self;
+    return [self initWithAppKey:appKey redirectURL:redirectURL restartAllTasksAfterRelaunch:YES keychainAccount:keychainAccount];
 }
 
 - (instancetype)initWithAppKey:(NSString *)appKey redirectURL:(NSString *)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch
@@ -138,34 +128,6 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
         _keychainAccount = kAccount;
     }
     return _keychainAccount;
-}
-
-- (void)setAppKey:(NSString *)appKey
-{
-    @synchronized (self) {
-        _authViewController.appKey = appKey;
-    }
-}
-
-- (NSString *)appKey
-{
-    @synchronized (self) {
-        return _authViewController.appKey;
-    }
-}
-
-- (void)setRedirectURL:(NSString *)redirectURL
-{
-    @synchronized (self) {
-        _authViewController.redirectURL = redirectURL;
-    }
-}
-
-- (NSString *)redirectURL
-{
-    @synchronized (self) {
-        return _authViewController.redirectURL;
-    }
 }
 
 - (NSString *)accessToken
@@ -232,7 +194,11 @@ NSString * const kAccount = @"ObjectiveDropbox default account";
 
 - (void)getNewTokenWithSuccess:(void (^)())successBlock fail:(void (^)(NSString * _Nonnull))failBlock
 {
-    [_authClient getNewTokenWithSuccess:^(NSString * _Nonnull token) {
+    UIViewController<DropboxAuthViewControllerProtocol> *authVC = [DropboxAuthViewController new];
+    authVC.redirectURL = self.redirectURL;
+    authVC.appKey = self.appKey;
+    authVC.delegate = self.authClient;
+    [_authClient getNewTokenWithAuthViewController:authVC success:^(NSString * _Nonnull token) {
         self.accessToken = token;
         if (successBlock)
         {

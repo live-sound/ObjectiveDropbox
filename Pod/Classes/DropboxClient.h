@@ -19,9 +19,8 @@
  */
 @interface DropboxClient : NSObject
 
-- (nonnull instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> * _Nonnull)viewController appKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch keychainAccount:(NSString * _Nonnull)keychainAccount;
-- (nonnull instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> * _Nonnull)viewController appKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL keychainAccount:(NSString * _Nonnull)keychainAccount;
 - (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch keychainAccount:(NSString * _Nonnull)keychainAccount;
+- (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL keychainAccount:(NSString * _Nonnull)keychainAccount;
 - (nonnull instancetype)initWithAppKey:(NSString * _Nonnull)appKey redirectURL:(NSString * _Nullable)redirectURL restartAllTasksAfterRelaunch:(BOOL)restartAllTasksAfterRelaunch;
 
 - (void)getNewTokenWithSuccess:(void(^ _Nullable)())successBlock fail:(void(^ _Nullable)(NSString * _Nonnull errorSummary))failBlock;

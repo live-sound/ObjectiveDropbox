@@ -15,6 +15,6 @@
 @property (nonatomic, weak, nullable) UIViewController<DropboxAuthViewControllerProtocol> *authViewController;
 @property (nonatomic, weak, nullable) id<DropboxAuthClientDelegate> delegate;
 
-- (nonnull instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> * _Nonnull)authViewController andWithDelegate:(id<DropboxAuthClientDelegate> _Nonnull)delegate;
+- (nonnull instancetype)initWithDelegate:(id<DropboxAuthClientDelegate> _Nonnull)delegate;
 
 @end
