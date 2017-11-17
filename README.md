@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/ObjectiveDropbox.svg?style=flat)](http://cocoapods.org/pods/ObjectiveDropbox)
 [![Platform](https://img.shields.io/cocoapods/p/ObjectiveDropbox.svg?style=flat)](http://cocoapods.org/pods/ObjectiveDropbox)
 
-The most complete Objective-C SDK for integrating with the Dropbox API v2. 
+The most complete third-party Objective-C SDK for integrating with the Dropbox API v2. 
 
 ## What is it capable of?
 Everything what Dropbox HTTP API v2 is capable of (except Dropbox Business API).

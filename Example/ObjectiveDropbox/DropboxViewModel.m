@@ -36,31 +36,29 @@ static NSString * const uploadFileExt = @"jpg";
 }
 
 
-- (void)checkTokenWithSuccess:(void(^ _Nullable)(void))successBlock fail:(void(^ _Nullable)(void))failBlock;
-{
-    if (self.dropbox.accessToken)
-    {
+- (void)getNewTokenWithSuccessBlock:(void (^ _Nullable)(void))successBlock failBlock:(void (^ _Nullable)(void))failBlock {
+    [self.dropbox getNewTokenWithSuccess:^ {
+        NSLog(@"Token received successfully");
         if (successBlock)
         {
             successBlock();
         }
-    }
-    else
+    } fail:^(NSString * _Nonnull errorSummary) {
+        NSLog(@"Failed to receive token: %@", errorSummary);
+        if (failBlock)
+        {
+            failBlock();
+        }
+    }];
+}
+
+- (void)checkTokenWithSuccess:(void(^ _Nullable)(void))successBlock fail:(void(^ _Nullable)(void))failBlock;
+{
+    if (self.dropbox.accessToken)
     {
-        [self.dropbox getNewTokenWithSuccess:^ {
-            NSLog(@"Token received successfully");            
-            if (successBlock)
-            {
-                successBlock();
-            }
-        } fail:^(NSString * _Nonnull errorSummary) {
-            NSLog(@"Failed to receive token: %@", errorSummary);
-            if (failBlock)
-            {
-                failBlock();
-            }
-        }];
-    }    
+        [self.dropbox removeTokenFromKeychain];
+    }
+    [self getNewTokenWithSuccessBlock:successBlock failBlock:failBlock];
 }
 
 - (void)startTesting

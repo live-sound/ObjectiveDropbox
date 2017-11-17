@@ -12,7 +12,7 @@
 
 - (instancetype)initWithCursor:(NSString *)cursor
 {
-    self = [self init];
+    self = [super init];
     if (self) {
         _cursor = cursor;
     }

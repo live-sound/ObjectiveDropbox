@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "DropboxAuthDelegate.h"
-
+#import "DropboxAuthViewControllerProtocol.h"
 
 @protocol DropboxAuthClientProtocol <DropboxAuthDelegate>
 
-- (void)getNewTokenWithSuccess:(void(^ _Nullable)(NSString * _Nonnull token))success fail:(void(^ _Nullable)(NSString * _Nonnull errorSummary))fail;
+- (void)getNewTokenWithAuthViewController:(nonnull UIViewController<DropboxAuthViewControllerProtocol> *)authViewController success:(void (^ _Nonnull)(NSString * _Nonnull))success fail:(void (^ _Nonnull)(NSString * _Nonnull))fail;
 
 @end
 

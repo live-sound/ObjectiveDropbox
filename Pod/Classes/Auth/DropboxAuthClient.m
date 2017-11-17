@@ -20,18 +20,18 @@ typedef void (^AuthSuccededBlock)(NSString * _Nonnull token);
     UINavigationController *nav;
 }
 
-- (instancetype)initWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> *)authViewController andWithDelegate:(id<DropboxAuthClientDelegate>)delegate
+- (instancetype)initWithDelegate:(id<DropboxAuthClientDelegate>)delegate
 {
     self = [self init];
     if (self) {
-        _authViewController = authViewController;
         _delegate = delegate;
     }
     return self;
 }
 
-- (void)getNewTokenWithSuccess:(void (^)(NSString * _Nonnull))success fail:(void (^)(NSString * _Nonnull))fail
+- (void)getNewTokenWithAuthViewController:(UIViewController<DropboxAuthViewControllerProtocol> *)authViewController success:(void (^)(NSString * _Nonnull))success fail:(void (^)(NSString * _Nonnull))fail
 {
+    _authViewController = authViewController;
     _authSuccededBlock = success;
     _authFailedBlock = fail;
     topMostViewController = [self getTopMostViewController];
